@@ -1,11 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.keysData = void 0;
-function keyGenerator() {
+function keysGenerator() {
     //Setup
-    var keys = [];
+    var keys = [[], [], [], []];
     var id = 1;
-    var pitchInt = 0;
     var keysNames = [
         'C',
         'C# / Db',
@@ -20,27 +18,26 @@ function keyGenerator() {
         'A# / Bb',
         'B'
     ];
+    var blackKeys = [1, 3, 6, 8, 10];
     //Creates key objects and fills the keys object array with key objects and their respective data
-    for (var i = 0; i < 48; i++) {
-        var key = {
-            id: id,
-            isActive: false,
-            pitchInt: pitchInt,
-            name: keysNames[i % 12],
-            toggleActive: function () {
-                this.isActive = !this.isActive;
-            }
-        };
-        keys.push(key);
-        id += 1;
-        if (pitchInt === 11) {
-            pitchInt = 0;
-        }
-        else {
-            pitchInt += 1;
+    for (var j = 0; j < 4; j++) {
+        for (var i = 0; i < 12; i++) {
+            var color = blackKeys.includes(i) ? 'black' : 'white';
+            var pitchInt = i;
+            var key = {
+                id: id,
+                isActive: false,
+                pitchInt: pitchInt,
+                name: keysNames[i % 12],
+                keyColor: color,
+                toggleOff: function () {
+                    this.isActive = false;
+                }
+            };
+            keys[j].push(key);
+            id += 1;
         }
     }
     return keys;
 }
-exports.keysData = keyGenerator();
-console.log(exports.keysData);
+exports.default = keysGenerator;

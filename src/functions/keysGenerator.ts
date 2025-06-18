@@ -4,15 +4,15 @@ interface Key {
     isActive: boolean;
     pitchInt: number;
     name: string;
-    toggleActive: () => void;
+    keyColor: string;
+    toggleOff: () => void;
 }
 
-function keyGenerator() {
+function keysGenerator() {
 
     //Setup
-    let keys: Key[] = [];
+    let keys: [Key[], Key[], Key[], Key[]] = [[], [], [], []];
     let id: number = 1;
-    let pitchInt: number = 0;
     const keysNames: string[] = [
         'C',
         'C# / Db',
@@ -27,29 +27,28 @@ function keyGenerator() {
         'A# / Bb',
         'B'
     ]
+    let blackKeys = [1, 3, 6, 8, 10];
     
     //Creates key objects and fills the keys object array with key objects and their respective data
-    for (let i = 0; i < 48; i++) {
-        let key: Key = {
-            id: id,
-            isActive: false,
-            pitchInt: pitchInt,
-            name: keysNames[i % 12],
-            toggleActive() {
-                this.isActive = !this.isActive;
+    for (let j = 0; j < 4; j++) {
+        for (let i = 0; i < 12; i++) {
+            let color: string = blackKeys.includes(i) ? 'black' : 'white';
+            let pitchInt: number = i;
+            let key: Key = {
+                id: id,
+                isActive: false,
+                pitchInt: pitchInt,
+                name: keysNames[i % 12],
+                keyColor: color,
+                toggleOff() {
+                    this.isActive = false;
+                }
             }
-        }
-        keys.push(key);
-        id += 1;
-        if (pitchInt === 11) {
-            pitchInt = 0;
-        } else {
-            pitchInt += 1;
+            keys[j].push(key);
+            id += 1;
         }
     }
-
     return keys;
 }
 
-export const keysData: Key[] = keyGenerator();
-console.log(keysData)
+export default keysGenerator;
