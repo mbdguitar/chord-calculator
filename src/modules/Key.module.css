@@ -1,0 +1,46 @@
+.white {
+  cursor: pointer;
+  background-color: #ffffff;
+  height: 200px;
+  grid-column: span 1;
+  z-index: 1;
+}
+.white:hover {
+  background-color: rgb(247, 247, 247);
+}
+.white:active {
+  background-color: #BD0000;
+}
+
+.black {
+  cursor: pointer;
+  background-color: #000000;
+  height: 100px;
+  z-index: 2;
+}
+.black:hover {
+  background-color: rgb(44, 44, 44);
+}
+.black:active {
+  background-color: #4f0000;
+}
+
+.cs {
+  grid-column: 2/3;
+}
+
+.ds {
+  grid-column: 4/5;
+}
+
+.fs {
+  grid-column: 7/8;
+}
+
+.gs {
+  grid-column: 9/10;
+}
+
+.as {
+  grid-column: 11/12;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,22 @@
+.octave {
+  top: 0;
+  width: 200px;
+  display: grid;
+  grid-template-rows: 100px 100px;
+}
+
+.top_row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row: 1/2;
+}
+
+.bottom_row {
+  position: relative;
+  top: -100px;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-row: 2 / 3;
+}
