@@ -1,9 +1,10 @@
 import React from "react";
-import styles from '../modules/Key.module.css';
 
-function Key(props) {
+function Key({ className, handleToggle }) {
     return (
-        <div className={props.className}></div>
+        <>
+            <div className={className} onClick={handleToggle}></div>
+        </>
     )
 }
 

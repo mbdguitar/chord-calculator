@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Key from '../components/Key'
 import styles from '../modules/Key.module.css';
 
-function KeyContainer({ name, keyColor }) {
+function KeyContainer(props) {
+    const [ keyIsActive, setKeyIsActive ] = useState(props.keyObj.isActive);
 
     function getColor(color) {
         if (color === 'white') {
@@ -29,8 +30,12 @@ function KeyContainer({ name, keyColor }) {
 
     function getClassName(name, color) {
         let className;
-        if (color === 'white') {
+        if (color === 'white' && keyIsActive) {
+            className = `${getColor(color)} ${styles.white_active}`
+        } else if (color === 'white' && !keyIsActive) {
             className = `${getColor(color)}`
+        } else if (color === 'black' && keyIsActive) {
+            className = `${getColor(color)} ${getSharpName(name)} ${styles.black_active}`
         } else {
             className = `${getColor(color)} ${getSharpName(name)}`
         }
@@ -38,9 +43,17 @@ function KeyContainer({ name, keyColor }) {
         return className;
     }
 
+    function handleToggle() {
+        setKeyIsActive(!keyIsActive)
+    }
+
     return (
         <>
-            <Key className={getClassName(name, keyColor)}/>
+            <Key 
+                className={getClassName(props.keyObj.name, props.keyObj.keyColor)} 
+                keyObj={props.keyObj} 
+                handleToggle={handleToggle} 
+            />
         </>
     )
 }

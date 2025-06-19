@@ -8,8 +8,11 @@
 .white:hover {
   background-color: rgb(247, 247, 247);
 }
-.white:active {
+.white_active {
   background-color: #BD0000;
+}
+.white_active:hover {
+  background-color: #c70000;
 }
 
 .black {
@@ -21,8 +24,11 @@
 .black:hover {
   background-color: rgb(44, 44, 44);
 }
-.black:active {
+.black_active {
   background-color: #4f0000;
+}
+.black_active:hover {
+  background-color: #630000;
 }
 
 .cs {

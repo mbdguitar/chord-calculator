@@ -8,14 +8,14 @@ function Octave({ octaveKeys }) {
             <div className={styles.top_row}>
                 {octaveKeys.map((key) => {
                     if (key.keyColor === 'black') {
-                        return <KeyContainer name={key.name} keyColor={key.keyColor}/>
+                        return <KeyContainer keyObj={key}/>
                     }
                 })}
             </div>
             <div className={styles.bottom_row}>
                 {octaveKeys.map((key) => {
                     if (key.keyColor === 'white') {
-                        return <KeyContainer name={key.name} keyColor={key.keyColor}/>
+                        return <KeyContainer keyObj={key}/>
                     }
                 })}
             </div>
