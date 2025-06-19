@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Key from '../components/Key'
-import styles from '../modules/Key.module.css';
+import styles from '../modules/KeyContainer.module.css';
 
 function KeyContainer(props) {
     const [ keyIsActive, setKeyIsActive ] = useState(props.keyObj.isActive);
@@ -25,6 +25,8 @@ function KeyContainer(props) {
                 return styles.gs
             case 'A':
                 return styles.as
+            default:
+                throw new Error('Error: Note name not valid')
         }
     }
 
