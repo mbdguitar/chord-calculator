@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Key from '../components/Key'
 import styles from '../modules/KeyContainer.module.css';
 
-function KeyContainer(props) {
-    const [ keyIsActive, setKeyIsActive ] = useState(props.keyObj.isActive);
+function KeyContainer({ keyObj, updateActiveKeys }) {
+    const [ activeKey, setActiveKey ] = useState(keyObj);
+
+    useEffect(() => {
+        updateActiveKeys(activeKey);
+    }, [activeKey]);
 
     function getColor(color) {
         if (color === 'white') {
@@ -32,11 +36,11 @@ function KeyContainer(props) {
 
     function getClassName(name, color) {
         let className;
-        if (color === 'white' && keyIsActive) {
+        if (color === 'white' && activeKey.isActive) {
             className = `${getColor(color)} ${styles.white_active}`
-        } else if (color === 'white' && !keyIsActive) {
+        } else if (color === 'white' && !activeKey.isActive) {
             className = `${getColor(color)}`
-        } else if (color === 'black' && keyIsActive) {
+        } else if (color === 'black' && activeKey.isActive) {
             className = `${getColor(color)} ${getSharpName(name)} ${styles.black_active}`
         } else {
             className = `${getColor(color)} ${getSharpName(name)}`
@@ -45,15 +49,26 @@ function KeyContainer(props) {
         return className;
     }
 
-    function handleToggle() {
-        setKeyIsActive(!keyIsActive)
+    function handleToggle(e) {
+        setActiveKey((prev) => {
+            if (activeKey.isActive) {
+                return {
+                    ...prev, 
+                    isActive: false,
+                }
+            } else {
+                return {
+                    ...prev, 
+                    isActive: true,
+                }
+            }
+        })
     }
 
     return (
         <>
             <Key 
-                className={getClassName(props.keyObj.name, props.keyObj.keyColor)} 
-                keyObj={props.keyObj} 
+                className={getClassName(activeKey.name, activeKey.keyColor)} 
                 handleToggle={handleToggle} 
             />
         </>
