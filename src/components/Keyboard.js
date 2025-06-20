@@ -3,8 +3,12 @@ import Octave from "./Octave.js"
 import keysGenerator from '../functions/keysGenerator.js';
 import styles from '../modules/Keyboard.module.css'
 
-function Keyboard() {
+function Keyboard({ sendKeys }) {
     const [ activeKeys, setActiveKeys ] = useState([])
+
+    useEffect(() => {
+        sendKeys(activeKeys)
+    }, [activeKeys])
 
     function updateActiveKeys(key) {
         if (key.isActive) {
