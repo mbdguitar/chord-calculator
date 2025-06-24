@@ -70,6 +70,7 @@ function KeyContainer({ keyObj, updateActiveKeys }) {
             <Key 
                 className={getClassName(activeKey.name, activeKey.keyColor)} 
                 handleToggle={handleToggle} 
+                name={activeKey.name}
             />
         </>
     )

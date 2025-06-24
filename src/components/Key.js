@@ -1,9 +1,11 @@
 import React from "react";
 
-function Key({ className, handleToggle }) {
+function Key({ className, handleToggle, name }) {
     return (
         <>
-            <div className={className} onClick={handleToggle}></div>
+            <div className={className} onClick={handleToggle}>
+                <p>{name}</p>
+            </div>
         </>
     )
 }
