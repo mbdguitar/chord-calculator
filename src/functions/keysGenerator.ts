@@ -33,7 +33,7 @@ function keysGenerator() {
     for (let j = 0; j < 4; j++) {
         for (let i = 0; i < 12; i++) {
             let color: string = blackKeys.includes(i) ? 'black' : 'white';
-            let pitchInt: number = i;
+            let pitchInt: number = i + 1;
             let key: Key = {
                 id: id,
                 isActive: false,

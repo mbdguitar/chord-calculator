@@ -23,7 +23,7 @@ function keysGenerator() {
     for (var j = 0; j < 4; j++) {
         for (var i = 0; i < 12; i++) {
             var color = blackKeys.includes(i) ? 'black' : 'white';
-            var pitchInt = i;
+            var pitchInt = i + 1;
             var key = {
                 id: id,
                 isActive: false,
