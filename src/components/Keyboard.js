@@ -32,11 +32,6 @@ function Keyboard({ sendKeys }) {
                     return <Octave octaveKeys={octaveKeys} updateActiveKeys={updateActiveKeys}/>
                 })}
             </div>
-            <div>
-                {activeKeys.map((k) => {
-                    return <p>{k.name /*Code to remove after testing */}</p>
-                })}
-            </div>
         </>
     );
 }
