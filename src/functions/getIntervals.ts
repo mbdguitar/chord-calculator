@@ -7,9 +7,9 @@ function getIntervals(notesArray: note[], rootInput: string) {
         const root: any = notes.find((note) => note.name === rootInput);
         const notesPitchInts: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         const rootIndex = notesPitchInts.indexOf(root.pitchInt);
-        let intervalsArray: string[] = [];
+        let intervalsArray: number[] = [];
 
-        const intervals = ['R', 'm2', 'M2', 'm3', 'M3', 'P4', 'Tri', 'P5', 'm6', 'M6', 'm7', 'M7'];
+        const intervals = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
         //counter represents distance between pitchInts, not index
         let counter = 0;

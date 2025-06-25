@@ -7,7 +7,7 @@ function getIntervals(notesArray, rootInput) {
         var notesPitchInts_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         var rootIndex = notesPitchInts_1.indexOf(root.pitchInt);
         var intervalsArray_1 = [];
-        var intervals_1 = ['R', 'm2', 'M2', 'm3', 'M3', 'P4', 'Tri', 'P5', 'm6', 'M6', 'm7', 'M7'];
+        var intervals_1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
         //counter represents distance between pitchInts, not index
         var counter_1 = 0;
         var _loop_1 = function (i) {
