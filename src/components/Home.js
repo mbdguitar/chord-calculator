@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { noteSorter } from '../functions/noteSorter';
+import chordCalculator from '../functions/chordCalculator';
 import getIntervals from '../functions/getIntervals';
 import Keyboard from './Keyboard';
 import RootForm from './RootForm';
 import CalculateButton from './CalculateButton';
+import ChordDisplay from './ChordDisplay';
 
 function Home() {
-    const [ keys, setKeys ] = useState([]) 
-    const [ root, setRoot ] = useState('')
-    const [ intervals, setIntervals ] = useState([])
+    const [ keys, setKeys ] = useState([]) ;
+    const [ root, setRoot ] = useState('');
+    const [ chord, setChord ] = useState('');
 
     useEffect(() => {
-        setKeys(noteSorter(keys))
+        setKeys(noteSorter(keys));
     }, [keys])
 
     function sendKeys(array) {
@@ -19,23 +21,21 @@ function Home() {
     }
 
     function getRoot({ target }) {
-        setRoot(target.value)
+        setRoot(target.value);
     }
 
-    function updateIntervals() {
-        setIntervals(getIntervals(keys, root));
+    function updateChord() {
+        setChord(chordCalculator(getIntervals(keys, root), root));
     }
 
     return (
         <>
+            <ChordDisplay chord={chord}/>
             <Keyboard sendKeys={sendKeys}/>
             <RootForm getRoot={getRoot} keys={keys}/>
-            <CalculateButton updateIntervals={updateIntervals}/>
-            <div>
-                {intervals ? intervals.map((i) => <p>{i}</p>) : <p>please click on some notes</p>}
-            </div>
+            <CalculateButton updateChord={updateChord}/>
         </>
     );
 } 
-
+ 
 export default Home;

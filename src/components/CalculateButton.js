@@ -1,8 +1,12 @@
 import React from "react";
+import styles from '../modules/CalculateButton.module.css';
 
-function CalculateButton({ updateIntervals }) {
+function CalculateButton({ updateChord }) {
+
     return (
-        <button onClick={updateIntervals}>Calculate Chord</button>
+        <div className={styles.calculate_button}>
+            <button onClick={updateChord}>Calculate</button>
+        </div>
     )
 }
 

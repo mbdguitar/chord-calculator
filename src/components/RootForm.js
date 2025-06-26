@@ -1,13 +1,15 @@
 import React from "react";
+import styles from '../modules/RootForm.module.css'
 
 function RootForm({ getRoot, keys }) {
     return (
-        <div>
+        <div className={styles.form_container}>
             <form>
-                <label for='notes'>Select the root note:</label>
+                <label htmlFor='notes'>Root Note</label>
                 <select id='notes' name='notes' onChange={getRoot}>
+                    <option default></option>
                     {keys.map((key) => {
-                        return <option value={key.name}>{key.name}</option>
+                        return <option value={key.name} key={key.id}>{key.name}</option>
                     })}
                 </select>
             </form>
