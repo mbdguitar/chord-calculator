@@ -1,0 +1,13 @@
+.calculate_button {
+    justify-self: center;
+}
+
+.calculate_button button{
+    width: 190px;
+    height: 60px;
+    border: none;
+    border-radius: 0;
+    background-color: #A6E89D;
+    color: #fff;
+    font-size: 24px;
+}

@@ -1,0 +1,21 @@
+.form_container {
+    width: 190px;
+    justify-self: center;
+    margin: 20px 0;
+}
+
+form { 
+    display: flex;
+    flex-direction: column;
+}
+
+.form_container select {
+    border-radius: 0;
+    height: 25px;
+}
+
+.form_container label {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 10px 0;
+}

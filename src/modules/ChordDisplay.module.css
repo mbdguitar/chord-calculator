@@ -1,0 +1,21 @@
+.chord_container {
+    height: 200px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chord_container h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 48px;
+}
+
+.chord_container p {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}

@@ -40,7 +40,7 @@
   cursor: pointer;
   background-color: #000000;
   color: white;
-  width: 20px;
+  width: 16px;
   height: 100px;
   z-index: 2;
   font-family: sans-serif;
@@ -85,4 +85,4 @@
 
 .as {
   grid-column: 11/12;
-}/*# sourceMappingURL=main.css.map */
+}
