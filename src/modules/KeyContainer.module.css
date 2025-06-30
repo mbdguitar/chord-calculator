@@ -14,6 +14,7 @@
 
 .white p {
   visibility: hidden;
+  margin: 0 0 5px 0
 }
 
 .white:hover {
@@ -50,6 +51,7 @@
 
 .black p {
   visibility: hidden;
+  margin: 0 0 5px 0
 }
 
 .black:hover {

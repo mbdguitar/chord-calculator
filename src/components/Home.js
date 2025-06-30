@@ -6,6 +6,7 @@ import Keyboard from './Keyboard';
 import RootForm from './RootForm';
 import CalculateButton from './CalculateButton';
 import ChordDisplay from './ChordDisplay';
+import styles from '../modules/Home.module.css';
 
 function Home() {
     const [ keys, setKeys ] = useState([]) ;
@@ -29,12 +30,12 @@ function Home() {
     }
 
     return (
-        <>
+        <div className={styles.home}>
             <ChordDisplay chord={chord}/>
             <Keyboard sendKeys={sendKeys}/>
             <RootForm getRoot={getRoot} keys={keys}/>
             <CalculateButton updateChord={updateChord}/>
-        </>
+        </div>
     );
 } 
  

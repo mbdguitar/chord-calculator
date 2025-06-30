@@ -13,7 +13,7 @@ function Keyboard({ sendKeys }) {
     function updateActiveKeys(key) {
         if (key.isActive) {
             setActiveKeys((prev) => {
-                return [key, ...prev];
+                return [...prev, key];
             })
         } else if (!key.isActive) {
             setActiveKeys((prev) => {
