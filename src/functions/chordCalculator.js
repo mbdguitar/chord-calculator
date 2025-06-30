@@ -1,22 +1,33 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var chordData_1 = require("./chordData");
-function doesChordMatch(intervalsArray, dataArray) {
-    return intervalsArray.every(function (i) { return dataArray.includes(i); });
+function removeDuplicateIntervals(intervalsArray) {
+    var array = intervalsArray.filter(function (number, index, array) { return array.indexOf(number) === index; });
+    return array;
 }
 function findChord(intervalsArray) {
     for (var i = 0; i < chordData_1.chords.length; i++) {
-        if (doesChordMatch(intervalsArray, chordData_1.chords[i][1])) {
+        if ((intervalsArray.toString()) === chordData_1.chords[i][1].toString()) {
             return chordData_1.chords[i][0];
         }
     }
-    throw new Error('Error: Chord could not be calculated');
+    throw new Error('Chord could not be found, please try another chord');
+}
+function numberToInterval(array) {
+    var intervalsInStrings = ['R', 'm2', 'M2', 'm3', 'M3', 'P4', 'Tri', 'P5', 'm6', 'M6', 'm7', 'M7'];
+    var intervals = [];
+    for (var i = 0; i < array.length; i++) {
+        intervals.push(intervalsInStrings[array[i]]);
+    }
+    return intervals;
 }
 function chordCalculator(intervalsArray, root) {
-    var chordName = "".concat(root).concat(findChord(intervalsArray));
+    var chordToFind = removeDuplicateIntervals(intervalsArray);
+    var intervalsInString = numberToInterval(chordToFind);
+    var chordName = "".concat(root).concat(findChord(chordToFind));
     var chord = {
         name: chordName,
-        intervals: intervalsArray
+        intervals: intervalsInString
     };
     return chord;
 }
