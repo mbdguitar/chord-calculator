@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styles from "../modules/Navbar.module.css"
 
 function Navbar() {
@@ -11,8 +12,8 @@ function Navbar() {
                 </div>
                 <div className={styles.menu}>
                     <ul>
-                        <li><a href='/home'>Home</a></li>
-                        <li><a href='/about'>About</a></li>
+                        <li><NavLink to='/home' className={ ({isActive}) => isActive? `${styles.nav_link_active}` : `${styles.nav_link_inactive}`}>Home</NavLink></li>
+                        <li><NavLink to='/about' className={ ({isActive}) => isActive? `${styles.nav_link_active}` : `${styles.nav_link_inactive}`}>About</NavLink></li>
                     </ul>
                 </div>
             </nav>
