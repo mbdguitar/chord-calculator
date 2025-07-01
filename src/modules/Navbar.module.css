@@ -1,9 +1,10 @@
 .nav {
     display: flex;
     flex-wrap: wrap;
-    height: 120px;
+    height: 160px;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Lexend', Helvetica, sans-serif;
 }
 
 .title {
@@ -12,13 +13,11 @@
 
 .title h1{
     margin: 0;
-    font-family: sans-serif;
     font-size: 36px;
 }
 
 .title p {
     margin: 0;
-    font-family: sans-serif;;
     font-size: 16px;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.3);
@@ -26,6 +25,7 @@
 
 .menu {
     padding: 0 30px 0 0;
+    font-family: 'Lexend', Helvetica, sans-serif;
 }
 
 .menu ul {
@@ -34,12 +34,19 @@
 
 .menu li {
     padding: 0 20px;
-    font-family: sans-serif;
     font-size: 24px;
     list-style: none;
 }
 
 .menu a {
     text-decoration: none;
-    color: black;
+}
+
+.nav_link_active {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.nav_link_inactive {
+    color: rgb(160, 160, 160);
 }

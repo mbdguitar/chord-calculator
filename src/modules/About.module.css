@@ -1,0 +1,157 @@
+.about {
+    font-family: 'Lexend', Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0 0 5px 0;
+}
+
+section {
+    margin: 10px 0;
+    padding: 0 50px;
+}
+
+.contact_form_container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin: 30px 0 0 0;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 2;
+    height: 55px;
+    margin: 0 0 10px 0;
+    background-color: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+.name label {
+    font-size: 12px;
+    margin: 7px 0 0 0;
+    padding: 0px 20px;
+}
+
+.name input {
+    font-size: 16px;
+    height: 30px;
+    margin: 0px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+.name input:focus-visible {
+    outline: 0;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 3;
+    height: 55px;
+    margin: 0 0 10px 0;
+    background-color: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+.email label {
+    font-size: 12px;
+    margin: 7px 0 0 0;
+    padding: 0px 20px;
+}
+
+.email input {
+    font-size: 16px;
+    height: 30px;
+    margin: 0px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+.email input:focus-visible {
+    outline: 0;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 3;
+    height: 55px;
+    margin: 0 0 10px 0;
+    background-color: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+.category label {
+    font-size: 12px;
+    margin: 7px 0 0 0;
+    padding: 0px 20px;
+}
+
+.category select {
+    font-size: 16px;
+    height: 30px;
+    margin: 0px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+.category select:focus-visible {
+    outline: 0;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 3;
+    height: 165px;
+    margin: 0 0 10px 0;
+    background-color: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+.message label {
+    font-size: 12px;
+    margin: 7px 0 0 0;
+    padding: 0px 20px;
+}
+
+.message textarea {
+    font-size: 16px;
+    font-family: 'Lexend', Helvetica, sans-serif;
+    height: 125px;
+    margin: 0px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    resize: none;
+}
+
+.message textarea:focus-visible {
+    outline: 0;
+}
+
+.about_submit_button {
+    cursor: pointer;
+    grid-column: 1 / 3;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: #4b4b4b;
+    color: #fff;
+}
+
+.about_submit_button:hover {
+    background-color: #2e2e2e;
+}
