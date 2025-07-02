@@ -24,6 +24,7 @@
 .white_active {
   background-color: #BD0000;
   color: white;
+  transition: 0.1s;
 }
 
 .white_active p {

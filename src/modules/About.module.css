@@ -1,7 +1,7 @@
 .about {
     font-family: 'Lexend', Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
 }
 
 h2 {
@@ -9,8 +9,8 @@ h2 {
 }
 
 section {
-    margin: 10px 0;
-    padding: 0 50px;
+    margin: 20px 0;
+    grid-column: 2 / 3;
 }
 
 .contact_form_container form {
@@ -154,4 +154,10 @@ section {
 
 .about_submit_button:hover {
     background-color: #2e2e2e;
+}
+
+@media screen and (max-width: 590px) {
+    .about section {
+        padding: 0 50px 0 0;
+    }
 }
