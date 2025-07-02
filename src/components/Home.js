@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { noteSorter } from '../functions/noteSorter';
 import chordCalculator from '../functions/chordCalculator';
 import getIntervals from '../functions/getIntervals';
@@ -30,12 +31,17 @@ function Home() {
     }
 
     return (
-        <div className={styles.home}>
+        <motion.div 
+            className={styles.home}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{transition: 0.1}}
+        >
             <ChordDisplay chord={chord}/>
             <Keyboard sendKeys={sendKeys}/>
             <RootForm getRoot={getRoot} keys={keys}/>
             <CalculateButton updateChord={updateChord}/>
-        </div>
+        </motion.div>
     );
 } 
  

@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from 'motion/react';
 import styles from '../modules/About.module.css';
 
 function About() {
     return (
-        <div className={styles.about}>
+        <motion.div 
+            className={styles.about}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{transition: 0.1}}
+        >
             <section>
                 <h2>About Me</h2>
                 <p>
@@ -61,7 +67,7 @@ function About() {
                     </form>
                 </div>
             </section>
-        </div>
+        </motion.div>
     )
 }
 
