@@ -6,17 +6,14 @@ function Octave({ octaveKeys, updateActiveKeys }) {
     return (
         <div className={styles.octave}>
             <div className={styles.top_row}>
-                {octaveKeys.map((key) => {
-                    if (key.keyColor === 'black') {
-                        return <KeyContainer keyObj={key} updateActiveKeys={updateActiveKeys}/>
-                    }
+                {octaveKeys.filter((key) => key.keyColor === 'black').map((key) => {
+                    return <KeyContainer keyObj={key} updateActiveKeys={updateActiveKeys}/>
+
                 })}
             </div>
             <div className={styles.bottom_row}>
-                {octaveKeys.map((key) => {
-                    if (key.keyColor === 'white') {
+                {octaveKeys.filter((key) => key.keyColor === 'white').map((key) => {
                         return <KeyContainer keyObj={key} updateActiveKeys={updateActiveKeys}/>
-                    }
                 })}
             </div>
         </div>
