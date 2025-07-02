@@ -1,0 +1,23 @@
+.error_message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    margin: 20px 0 0 0;
+    grid-column: 2 / 3;
+    background-color: rgb(255, 222, 214);
+    border: solid 2px rgb(255, 178, 168);
+}
+
+.error_message p {
+    font-family: 'Lexend', Helvetica, sans-serif;
+    padding: 0 0 0 20px;
+    font-size: 13px;
+}
+
+.error_message button {
+    cursor: pointer;
+    padding: 0 20px;
+    border: none;
+    background-color: inherit;
+}

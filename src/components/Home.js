@@ -5,6 +5,7 @@ import chordCalculator from '../functions/chordCalculator';
 import getIntervals from '../functions/getIntervals';
 import Keyboard from './Keyboard';
 import RootForm from './RootForm';
+import ErrorMessage from './ErrorMessage';
 import CalculateButton from './CalculateButton';
 import ChordDisplay from './ChordDisplay';
 import styles from '../modules/Home.module.css';
@@ -13,6 +14,7 @@ function Home() {
     const [ keys, setKeys ] = useState([]) ;
     const [ root, setRoot ] = useState('');
     const [ chord, setChord ] = useState('');
+    const [ errorMessage, setErrorMessage ] = useState('')
 
     useEffect(() => {
         setKeys(noteSorter(keys));
@@ -26,8 +28,17 @@ function Home() {
         setRoot(target.value);
     }
 
+    function removeErrorMessage() {
+        setErrorMessage('')
+    }
+
     function updateChord() {
-        setChord(chordCalculator(getIntervals(keys, root), root));
+        let result = chordCalculator(getIntervals(keys, root), root);
+        if (typeof result === 'string') {
+            setErrorMessage(result)
+        } else {
+            setChord(result);
+        }
     }
 
     return (
@@ -39,6 +50,7 @@ function Home() {
         >
             <ChordDisplay chord={chord}/>
             <Keyboard sendKeys={sendKeys}/>
+            {errorMessage !== '' ? <ErrorMessage errorMessage={errorMessage} removeErrorMessage={removeErrorMessage}/> : ''}
             <RootForm getRoot={getRoot} keys={keys}/>
             <CalculateButton updateChord={updateChord}/>
         </motion.div>
