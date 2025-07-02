@@ -1,8 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+function getNumberOfOctaves() {
+    var numberOfOctaves;
+    var screenSize = window.innerWidth;
+    if (screenSize >= 880) {
+        numberOfOctaves = 4;
+    }
+    else if (screenSize < 880 && screenSize > 660) {
+        numberOfOctaves = 3;
+    }
+    else {
+        numberOfOctaves = 2;
+    }
+    return numberOfOctaves;
+}
 function keysGenerator() {
     //Setup
-    var keys = [[], [], [], []];
+    var octavesArray = [];
     var id = 1;
     var keysNames = [
         'C',
@@ -19,8 +33,10 @@ function keysGenerator() {
         'B'
     ];
     var blackKeys = [1, 3, 6, 8, 10];
+    var numberOfOctaves = getNumberOfOctaves();
     //Creates key objects and fills the keys object array with key objects and their respective data
-    for (var j = 0; j < 4; j++) {
+    for (var j = 0; j < numberOfOctaves; j++) {
+        var octaveKeys = [];
         for (var i = 0; i < 12; i++) {
             var color = blackKeys.includes(i) ? 'black' : 'white';
             var pitchInt = i + 1;
@@ -34,10 +50,11 @@ function keysGenerator() {
                     this.isActive = false;
                 }
             };
-            keys[j].push(key);
+            octaveKeys.push(key);
             id += 1;
         }
+        octavesArray.push(octaveKeys);
     }
-    return keys;
+    return octavesArray;
 }
 exports.default = keysGenerator;
