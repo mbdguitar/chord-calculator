@@ -1,7 +1,8 @@
 .form_container {
     width: 190px;
     justify-self: center;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
+    grid-column: 2 / 3;
 }
 
 .form_container form { 

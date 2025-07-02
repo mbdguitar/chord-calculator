@@ -5,6 +5,7 @@
   background-color: #D9D9D9;
   gap: 2px;
   z-index: 0;
+  grid-column: 2 / 3;
 }
 
 @media screen and (max-width: 880px) {
