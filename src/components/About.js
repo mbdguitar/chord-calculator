@@ -13,10 +13,10 @@ function About() {
             <section>
                 <h2>About Me</h2>
                 <p>
-                    Hey there! I'm Miguel, a front-end developer, music educator, and performer. 
+                    Hey there! I'm Miguel, a music educator, performer, and front-end developer. 
                     This app was built to help musicians, students, and producers quickly identify and understand chords played on a piano. 
                     This project is the result of my desire to help my students understand chords and harmony in a way they have the freedom to 
-                    experiment through an interactive interface
+                    experiment through an interactive interface.
                 </p>
             </section>
             <section>
@@ -25,7 +25,7 @@ function About() {
                     This app analyzes selected notes on the Keyboard and searches through a database to display the matching chord type. 
                     It currently supports up to 250 different chord types, with inversions coming soon on a future update. Due to the complex
                     nature of harmony and standard naming conventions in music theory, there is a chance the chord you're looking for is not
-                    able to be calculated.
+                    able to be calculated (soon to be fixed).
                 </p>
             </section>
             <section>
