@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Chord Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web-based music theory tool that helps users identify the name of a chord based on selected notes on an interactive piano interface.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Interactive Piano UI** - Click on the keys to select the notes of the chord you would like to calculate.
+- **Root Dropdown Menu** - Select a root you would like to use to calculate the chord name.
+- **Chord Name Calculator** - Click on  the "Calculate" button to analyze thhe selected notes and display the chord name.
 
-### `npm start`
+## How To Use 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Click on the piano keys to select the chord that make up your chord (make sure to select at least 3 keys)
+1. Select a root note from the dropdown menu. The chord name will be calculated based on the selected root
+1. Click on the "Calculate" button
+1. The app will analyze the intervals in the provided chord and return the name of the chord (e.g., Cmaj7, Am, F#dim, etc.).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Know Issues
 
-### `npm test`
+1. Becase the app searches through a database to find the matching chord type, it is possible that the chord you would like to calculate is not able to be found. This is due to the numerous combinations of intervals that are possible in music and the inconsistent naming standard for chords in music theory that adds an extra layer of complexity when deciding how to calculate chords.
+1. There is a bug that occurs when resizing the screen that causes the elements on the website and the layout to be rendered incorrectly.
+1. When resizing the keyboard while having active keys, they are not removed from the dropdown menu and are still used to calculate the chord, even though they should be removed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React JS
+- React Router
+- Typescript / Javascript
+- HTML / CSS
+- Framer-Motion
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contact
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For any questions, suggestions, or feedback, please feel free to reach out:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Email: miguelbarretoguitar@gmail.com
+- GitHub: @mbdguitar
