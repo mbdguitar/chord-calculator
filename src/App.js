@@ -1,5 +1,5 @@
 import React from "react";
-import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate } from 'react-router-dom';
 import Home from './components/Home';
 import About from "./components/About";
 import Root from "./components/Root";
