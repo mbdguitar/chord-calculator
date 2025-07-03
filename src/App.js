@@ -6,7 +6,8 @@ import Root from "./components/Root";
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={ <Root/> }> 
-    <Route path='home' element= { <Home/> }/>
+    <Route index element={<Navigate to="/home" replace />} />
+    <Route path='home' element={ <Home/> }/>
     <Route path='about' element={ <About />} />
   </Route> 
 ))
