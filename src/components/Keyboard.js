@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import useWindowWidth from "../hooks/useWindowWidth.js";
 import Octave from "./Octave.js"
 import keysGenerator from '../functions/keysGenerator.js';
@@ -11,13 +11,13 @@ function Keyboard({ sendKeys }) {
 
     useEffect(() => {
         sendKeys(activeKeys)
-    }, [activeKeys])
+    }, [activeKeys, sendKeys])
 
     useEffect(() => {
         setKeysToRender(keysGenerator());
     }, [width])
 
-    function updateActiveKeys(key) {
+    const updateActiveKeys = useCallback((key) => {
         if (key.isActive) {
             setActiveKeys((prev) => {
                 return [...prev, key];
@@ -27,7 +27,7 @@ function Keyboard({ sendKeys }) {
                 return [...prev].filter((k) => k.id !== key.id);
             })
         }
-    }
+    }, [])
 
     return (
         <>

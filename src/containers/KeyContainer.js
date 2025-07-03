@@ -7,7 +7,7 @@ function KeyContainer({ keyObj, updateActiveKeys }) {
 
     useEffect(() => {
         updateActiveKeys(activeKey);
-    }, [activeKey]);
+    }, [activeKey, updateActiveKeys]);
 
     function getColor(color) {
         if (color === 'white') {
