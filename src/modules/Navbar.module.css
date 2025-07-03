@@ -1,9 +1,5 @@
-header {
-    height: 150px;
-}
-
 .nav {
-    padding: 50px 0;
+    margin: 50px 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -64,19 +60,71 @@ header {
     transition: 0.3s;
 }
 
-@media screen and (max-width: 662px) {
+@media screen and (max-width: 768px) {
+    .title {
+        padding: 0 0 0 50px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+        
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+
+    .menu {
+        padding: 0 30px 0 0;
+        font-size: 20px;
+    }
+
+    .menu ul {
+        display: inline-flex;
+        align-content: start;
+    }
+
+    .menu li {
+        list-style: none;
+        padding: 0 20px 0 0;
+    }
+}
+
+@media screen and (max-width: 580px) {
     .nav {
-        align-items: center;
+        flex-direction: column;
+        align-items: normal;
+        
+    }
+    .title {
+        padding: 0 0 0 50px;
+    }
+
+    .title p {
+        display: none;
+    }
+
+    .menu {
+        padding: 0 0 0 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        margin: 30px 0;
+        align-items: baseline;
         justify-content: start;
         font-family: 'Lexend', Helvetica, sans-serif;
     }
 
     .title {
+        padding: 0 0 0 30px;
         text-wrap: nowrap;
     }
 
     .title h1 {
-        font-size: 36px;
+        font-size: 20px;
     }
 
     .title p {
@@ -85,7 +133,7 @@ header {
 
     .menu {
         font-size: 20px;
-        padding: 0 50px;
+        padding: 0 0 0 30px;
     }
 
     .menu ul {
