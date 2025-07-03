@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var chordData_1 = require("./chordData");
 function removeDuplicateIntervals(intervalsArray) {
