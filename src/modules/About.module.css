@@ -2,7 +2,7 @@
     font-family: 'Lexend', Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
-    row-gap: 50px;
+    row-gap: 30px;
 }
 
 h2 {
@@ -11,6 +11,10 @@ h2 {
 
 section {
     grid-column: 2 / 3;
+}
+
+.about .contact_form {
+    margin: 0 0 50px 0;
 }
 
 .contact_form_container form {
@@ -112,11 +116,14 @@ section {
     .about {
         display: grid;
         grid-template-columns: 1fr;
-        row-gap: 30px;
     }
 
     section {
         padding: 0 50px;
+    }
+
+    .about .contact_form {
+        margin: 0 0 50px 0;
     }
 
     h2 {
@@ -176,19 +183,23 @@ section {
         row-gap: 25px;
     }
 
-    section {
+    .about section {
         padding: 0 30px;
     }
 
-    h2 {
+    .about .contact_form {
+        margin: 0 0 50px 0;
+    }
+
+    .about h2 {
         font-size: 16px;
     }
 
-    p {
+    .about p {
         font-size: 12px;
     }
 
-    li {
+    .about li {
         font-size: 12px;
     }
 

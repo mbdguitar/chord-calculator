@@ -36,7 +36,7 @@ function About() {
                     <li>Audio playback</li>
                 </ul>
             </section>
-            <section>
+            <section className={styles.contact_form}>
                 <h2>Contact</h2>
                 <p>Found some bugs or have any questions about the program? Let's get in touch!</p>
                 <div className={styles.contact_form_container}>
