@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Key from '../components/Key'
+import Key from '../components/Keyboard/Key'
 import styles from '../modules/KeyContainer.module.css';
 
 function KeyContainer({ keyObj, updateActiveKeys }) {

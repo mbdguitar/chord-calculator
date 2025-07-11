@@ -1,6 +1,6 @@
 import React from "react";
-import KeyContainer from '../containers/KeyContainer';
-import styles from '../modules/Octave.module.css'
+import KeyContainer from '../../containers/KeyContainer';
+import styles from '../../modules/Octave.module.css'
 
 function Octave({ octaveKeys, updateActiveKeys }) {
     return (
@@ -13,7 +13,7 @@ function Octave({ octaveKeys, updateActiveKeys }) {
             </div>
             <div className={styles.bottom_row}>
                 {octaveKeys.filter((key) => key.keyColor === 'white').map((key) => {
-                        return <KeyContainer keyObj={key} updateActiveKeys={updateActiveKeys}/>
+                    return <KeyContainer keyObj={key} updateActiveKeys={updateActiveKeys}/>
                 })}
             </div>
         </div>

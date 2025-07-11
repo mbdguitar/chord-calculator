@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
-import useWindowWidth from "../hooks/useWindowWidth.js";
+import useWindowWidth from "../../hooks/useWindowWidth.js";
 import Octave from "./Octave.js"
-import keysGenerator from '../functions/keysGenerator.js';
-import styles from '../modules/Keyboard.module.css'
+import keysGenerator from '../../functions/keysGenerator.js';
+import styles from '../../modules/Keyboard.module.css'
 
 function Keyboard({ sendKeys }) {
     const [ keysToRender, setKeysToRender ] = useState(keysGenerator())

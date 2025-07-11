@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { noteSorter } from '../functions/noteSorter';
 import chordCalculator from '../functions/chordCalculator';
 import getIntervals from '../functions/getIntervals';
-import Keyboard from './Keyboard';
+import Keyboard from './Keyboard/Keyboard';
 import RootForm from './RootForm';
 import ErrorMessage from './ErrorMessage';
 import CalculateButton from './CalculateButton';
