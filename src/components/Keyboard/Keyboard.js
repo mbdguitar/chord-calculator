@@ -4,14 +4,14 @@ import Octave from "./Octave.js"
 import keysGenerator from '../../functions/keysGenerator.js';
 import styles from '../../modules/Keyboard.module.css'
 
-function Keyboard({ sendKeys }) {
+function Keyboard({ sendNotes }) {
     const [ keysToRender, setKeysToRender ] = useState(keysGenerator())
     const [ activeKeys, setActiveKeys ] = useState([])
     const { width } = useWindowWidth();
 
     useEffect(() => {
-        sendKeys(activeKeys)
-    }, [activeKeys, sendKeys])
+        sendNotes(activeKeys)
+    }, [activeKeys, sendNotes])
 
     useEffect(() => {
         setKeysToRender(keysGenerator());
