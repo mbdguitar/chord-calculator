@@ -25,7 +25,6 @@ function numberToInterval(array: number[]) {
     } else {
         throw new Error('Please select at least 3 notes')
     }
-    
 }
 
 function chordCalculator(intervalsArray: number[], root: string) {

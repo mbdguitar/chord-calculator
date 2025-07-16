@@ -29,20 +29,7 @@ function keysGenerator() {
     //Setup
     let octavesArray: Key[][] = [];
     let id: number = 1;
-    const keysNames: string[] = [
-        'C',
-        'C# / Db',
-        'D',
-        'D# / Eb',
-        'E',
-        'F',
-        'F# / Gb',
-        'G',
-        'G# / Ab',
-        'A',
-        'A# / Bb',
-        'B'
-    ]
+    const keysNames: string[] = ['C', 'C# / Db', 'D', 'D# / Eb', 'E', 'F', 'F# / Gb', 'G', 'G# / Ab', 'A', 'A# / Bb', 'B'];
     let blackKeys = [1, 3, 6, 8, 10];
     let numberOfOctaves = getNumberOfOctaves();
     

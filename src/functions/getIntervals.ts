@@ -1,4 +1,11 @@
-import { noteSorter, note } from './noteSorter';
+interface note {
+    id: number;
+    isActive: boolean;
+    pitchInt: number;
+    name: string;
+    keyColor: string;
+    toggleOff: () => void;
+}
 
 function getIntervals(notesArray: note[], rootInput: string) {
 

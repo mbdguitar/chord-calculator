@@ -26,6 +26,7 @@ function numberToInterval(array) {
     }
 }
 function chordCalculator(intervalsArray, root) {
+    console.log(removeDuplicateIntervals(intervalsArray));
     try {
         if (root) {
             var chordToFind = removeDuplicateIntervals(intervalsArray);

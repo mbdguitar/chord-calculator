@@ -6,10 +6,10 @@ interface Fret {
     name: string;
 }
 
-function fretsGenerator(tuning: string) {
+function fretsGenerator(tuning: string, stringNumber: number) {
     let fretboardLength: number = 12;
     let fretArray: Fret[] = [];
-    let id: number = 1;
+    let id: number = ((fretboardLength * stringNumber) + (stringNumber * 1)) - fretboardLength;
     const fretNotes: string[] = ['C', 'C# / Db', 'D', 'D# / Eb', 'E', 'F', 'F# / Gb', 'G', 'G# / Ab', 'A', 'A# / Bb', 'B'];
     const firstNoteIndex = fretNotes.indexOf(tuning);
 
@@ -18,10 +18,10 @@ function fretsGenerator(tuning: string) {
         const fret: Fret = {
             id: id,
             isActive: false,
-            fretNumber: i,
-            pitchInt: currentFretIndex,
-            name: fretNotes[currentFretIndex]
-        }
+            pitchInt: currentFretIndex + 1,
+            name: fretNotes[currentFretIndex],
+            fretNumber: i
+        };
         fretArray.push(fret);
         id += 1;
     }
