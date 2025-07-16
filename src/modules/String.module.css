@@ -1,0 +1,9 @@
+.string {
+    display: grid;
+    grid-template-columns: 
+        12px 90.63px 85.08px 79.87px 74.97px 70.35px 
+        66.10px 62.08px 58.27px 54.67px 51.29px 48.08px 45.14px;
+    grid-column: 1 / 13;
+    background-color: blanchedalmond;
+    
+}
