@@ -1,11 +1,13 @@
 .fretboard_container {
-    margin-top: 20px;
     display: grid;
     grid-template-rows: repeat(6, 33px);
     width: 800px;
     height: 200px;
-    padding: 5px;
     background-color: #D9D9D9;
     z-index: 0;
     grid-column: 2 / 3;
+    background-image: url('../images/svg/fretboard-long.svg');
+    background-size: 800px 200px;
+    background-position: center;
+    border: 5px solid #ebebeb;
 }
