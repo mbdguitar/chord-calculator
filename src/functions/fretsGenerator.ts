@@ -28,7 +28,7 @@ function fretsGenerator(tuning: string, stringNumber: number) {
     const fretNotes: string[] = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
     const firstNoteIndex = fretNotes.indexOf(tuning);
 
-    for (let i = 0; i < fretboardLength + 1; i++) {
+    for (let i = 0; i < fretboardLength; i++) {
         const currentFretIndex = (firstNoteIndex + i) % 12;
         const fret: Fret = {
             id: id,

@@ -1,7 +1,7 @@
 .fretboard {
     display: grid;
     grid-template-rows: repeat(6, 33.3px);
-    width: 816px;
+    width: 800px;
     height: 200px;
     background-color: #D9D9D9;
     z-index: 0;
@@ -13,14 +13,14 @@
 
 @media screen and (max-width: 880px) {
     .fretboard {
-        width: 616px;
+        width: 600px;
         background-image: url('../images/svg/fretboard-medium.svg');
     }
 }
 
 @media screen and (max-width: 660px) {
     .fretboard {
-        width: 416px;
+        width: 400px;
         background-image: url('../images/svg/fretboard-small.svg');
     }
 }

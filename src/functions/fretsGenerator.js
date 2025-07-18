@@ -1,3 +1,4 @@
+"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function getNumberOfFrets() {
     var numberOfFrets;
@@ -19,7 +20,7 @@ function fretsGenerator(tuning, stringNumber) {
     var id = ((fretboardLength * stringNumber) + (stringNumber * 1)) - fretboardLength;
     var fretNotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
     var firstNoteIndex = fretNotes.indexOf(tuning);
-    for (var i = 0; i < fretboardLength + 1; i++) {
+    for (var i = 0; i < fretboardLength; i++) {
         var currentFretIndex = (firstNoteIndex + i) % 12;
         var fret = {
             id: id,
