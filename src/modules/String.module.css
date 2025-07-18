@@ -2,3 +2,15 @@
     display: grid;
     grid-template-columns: 16px repeat(16, 1fr);
 }
+
+@media screen and (max-width: 880px) {
+    .string {
+        grid-template-columns: 16px repeat(12, 1fr);
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .string {
+        grid-template-columns: 16px repeat(8, 1fr);
+    }
+}

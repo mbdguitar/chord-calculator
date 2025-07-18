@@ -8,7 +8,7 @@ import RootForm from '../components/RootForm';
 import ErrorMessage from '../components/ErrorMessage';
 import CalculateButton from '../components/CalculateButton';
 import ChordDisplay from '../components/ChordDisplay';
-import styles from '../modules/Home.module.css';
+import styles from '../modules/FretboardContainer.module.css';
 
 function FretboardContainer() {
     const [ notes, setNotes ] = useState([]) ;
@@ -43,7 +43,7 @@ function FretboardContainer() {
 
     return (
         <motion.div 
-            className={styles.home}
+            className={styles.fretboard_container}
             initial={{ opacity: 0}}
             animate={{ opacity: 1}}
             transition={{transition: 0.1}}

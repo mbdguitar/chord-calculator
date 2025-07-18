@@ -1,6 +1,21 @@
+"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+function getNumberOfFrets() {
+    var numberOfFrets;
+    var screenSize = window.innerWidth;
+    if (screenSize >= 880) {
+        numberOfFrets = 16;
+    }
+    else if (screenSize < 880 && screenSize > 660) {
+        numberOfFrets = 12;
+    }
+    else {
+        numberOfFrets = 8;
+    }
+    return numberOfFrets;
+}
 function fretsGenerator(tuning, stringNumber) {
-    var fretboardLength = 16;
+    var fretboardLength = getNumberOfFrets();
     var fretArray = [];
     var id = ((fretboardLength * stringNumber) + (stringNumber * 1)) - fretboardLength;
     var fretNotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];

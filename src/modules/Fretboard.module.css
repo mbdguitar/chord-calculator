@@ -1,13 +1,26 @@
-.fretboard_container {
+.fretboard {
     display: grid;
-    grid-template-rows: repeat(6, 33px);
-    width: 800px;
+    grid-template-rows: repeat(6, 33.3px);
+    width: 816px;
     height: 200px;
     background-color: #D9D9D9;
     z-index: 0;
     grid-column: 2 / 3;
     background-image: url('../images/svg/fretboard-long.svg');
-    background-size: 800px 200px;
     background-position: center;
     border: 5px solid #ebebeb;
+}
+
+@media screen and (max-width: 880px) {
+    .fretboard {
+        width: 616px;
+        background-image: url('../images/svg/fretboard-medium.svg');
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .fretboard {
+        width: 416px;
+        background-image: url('../images/svg/fretboard-small.svg');
+    }
 }

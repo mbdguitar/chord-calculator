@@ -23,7 +23,7 @@ function Fretboard({ sendNotes }) {
     }, [])
 
     return (
-        <div className={styles.fretboard_container}>
+        <div className={styles.fretboard}>
             {strings.map((string) => {
                 return <String tuning={string[0]} stringNumber={string[1]} updateActiveFrets={updateActiveFrets}/>
             })}

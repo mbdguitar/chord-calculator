@@ -6,8 +6,23 @@ interface Fret {
     name: string;
 }
 
+function getNumberOfFrets() {
+    let numberOfFrets: number;
+    const screenSize: number = window.innerWidth;
+
+    if (screenSize >= 880) {
+        numberOfFrets = 16;
+    } else if (screenSize < 880 && screenSize > 660) {
+        numberOfFrets = 12;
+    } else {
+        numberOfFrets = 8;
+    }
+
+    return numberOfFrets
+}
+
 function fretsGenerator(tuning: string, stringNumber: number) {
-    let fretboardLength: number = 16;
+    let fretboardLength: number = getNumberOfFrets();
     let fretArray: Fret[] = [];
     let id: number = ((fretboardLength * stringNumber) + (stringNumber * 1)) - fretboardLength;
     const fretNotes: string[] = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];

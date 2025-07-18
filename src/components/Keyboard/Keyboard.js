@@ -31,7 +31,7 @@ function Keyboard({ sendNotes }) {
 
     return (
         <>
-            <div className={styles.keyboard_container}>
+            <div className={styles.keyboard}>
                 {keysToRender.map((octave) => {
                     let octaveKeys = octave;
                     return <Octave octaveKeys={octaveKeys} updateActiveKeys={updateActiveKeys}/>

@@ -1,4 +1,4 @@
-.keyboard_container {
+.keyboard {
   display: inline-flex;
   width: 800px;
   padding: 5px;
@@ -9,13 +9,13 @@
 }
 
 @media screen and (max-width: 880px) {
-  .keyboard_container {
-    width: 600px;
+  .keyboard {
+  width: 600px;
   }
 }
 
 @media screen and (max-width: 660px) {
-  .keyboard_container {
+  .keyboard {
     width: 400px;
   }
 }

@@ -1,0 +1,38 @@
+<svg width="416" height="200" viewBox="0 0 416 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="16" width="400" height="200" fill="#2E2F33"/>
+<rect width="16" height="200" fill="#7A7A7A"/>
+<line x1="66" y1="200" x2="66" stroke="#474747" stroke-width="2"/>
+<line x1="116" y1="200" x2="116" stroke="#474747" stroke-width="2"/>
+<line x1="166" y1="200" x2="166" stroke="#474747" stroke-width="2"/>
+<line x1="216" y1="200" x2="216" stroke="#474747" stroke-width="2"/>
+<line x1="266" y1="200" x2="266" stroke="#474747" stroke-width="2"/>
+<line x1="316" y1="200" x2="316" stroke="#474747" stroke-width="2"/>
+<line x1="366" y1="200" x2="366" stroke="#474747" stroke-width="2"/>
+<circle cx="141" cy="100" r="11" fill="#EEEEEE"/>
+<circle cx="241" cy="100" r="11" fill="#EEEEEE"/>
+<circle cx="341" cy="100" r="11" fill="#EEEEEE"/>
+<line y1="16.5" x2="416" y2="16.5" stroke="#EEEEEE"/>
+<line y1="15.5" x2="416" y2="15.5" stroke="white"/>
+<line y1="17.5" x2="416" y2="17.5" stroke="#E2E2E2"/>
+<line y1="18.5" x2="416" y2="18.5" stroke="#1F1F1F"/>
+<line y1="49.5" x2="416" y2="49.5" stroke="#EEEEEE"/>
+<line y1="48.5" x2="416" y2="48.5" stroke="white"/>
+<line y1="50.5" x2="416" y2="50.5" stroke="#E2E2E2"/>
+<line y1="51.5" x2="416" y2="51.5" stroke="#1F1F1F"/>
+<line y1="82.5" x2="416" y2="82.5" stroke="#EEEEEE"/>
+<line y1="81.5" x2="416" y2="81.5" stroke="white"/>
+<line y1="83.5" x2="416" y2="83.5" stroke="#E2E2E2"/>
+<line y1="84.5" x2="416" y2="84.5" stroke="#1F1F1F"/>
+<line y1="116.5" x2="416" y2="116.5" stroke="#EEEEEE"/>
+<line y1="115.5" x2="416" y2="115.5" stroke="white"/>
+<line y1="117.5" x2="416" y2="117.5" stroke="#E2E2E2"/>
+<line y1="118.5" x2="416" y2="118.5" stroke="#1F1F1F"/>
+<line y1="149.5" x2="416" y2="149.5" stroke="#EEEEEE"/>
+<line y1="148.5" x2="416" y2="148.5" stroke="white"/>
+<line y1="150.5" x2="416" y2="150.5" stroke="#E2E2E2"/>
+<line y1="151.5" x2="416" y2="151.5" stroke="#1F1F1F"/>
+<line y1="182.5" x2="416" y2="182.5" stroke="#EEEEEE"/>
+<line y1="181.5" x2="416" y2="181.5" stroke="white"/>
+<line y1="183.5" x2="416" y2="183.5" stroke="#E2E2E2"/>
+<line y1="184.5" x2="416" y2="184.5" stroke="#1F1F1F"/>
+</svg>

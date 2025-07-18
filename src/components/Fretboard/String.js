@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import useWindowWidth from '../../hooks/useWindowWidth';
 import Fret from './Fret';
 import fretsGenerator from '../../functions/fretsGenerator';
 import styles from '../../modules/String.module.css'
 
 function String({ tuning, stringNumber, updateActiveFrets }) {
-    const [ frets, setFrets ] = useState(fretsGenerator(tuning, stringNumber)); 
+    const [ fretsToRender, setFretsToRender ] = useState(fretsGenerator(tuning, stringNumber));
+    const [ frets, setFrets ] = useState(fretsToRender); 
     const [ lastActiveFret, setLastActiveFret ] = useState ({});
+    const { width } = useWindowWidth();
+
+    useEffect(() => {
+        setFretsToRender(fretsGenerator(tuning, stringNumber))
+    }, [width])
 
     useEffect(() => {
         let activeFret = frets.find((fret) => fret.isActive)
