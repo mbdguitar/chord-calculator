@@ -3,7 +3,7 @@ import String from './String';
 import styles from '../../modules/Fretboard.module.css';
 
 function Fretboard({ sendNotes }) {
-    const [ strings, setStrings ] = useState([['E', 1], ['B', 2], ['G', 3], ['D', 4], ['A', 5], ['E', 6]]);
+    const [ strings ] = useState([['E', 1], ['B', 2], ['G', 3], ['D', 4], ['A', 5], ['E', 6]]);
     const [ activeFrets, setActiveFrets ] = useState([]);
 
     useEffect(() => {

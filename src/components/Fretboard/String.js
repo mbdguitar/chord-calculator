@@ -12,7 +12,7 @@ function String({ tuning, stringNumber, updateActiveFrets }) {
 
     useEffect(() => {
         setFretsToRender(fretsGenerator(tuning, stringNumber))
-    }, [width])
+    }, [width, tuning, stringNumber]);
 
     useEffect(() => {
         let activeFret = frets.find((fret) => fret.isActive)
@@ -22,7 +22,7 @@ function String({ tuning, stringNumber, updateActiveFrets }) {
         } else {
             updateActiveFrets({ ...lastActiveFret, isActive: false})
         }
-    }, [frets, updateActiveFrets]);
+    }, [frets, lastActiveFret, updateActiveFrets]);
 
     useEffect(() => {
         let activeFret = frets.find((fret) => fret.isActive)
