@@ -4,7 +4,7 @@ import { noteSorter } from '../functions/noteSorter';
 import chordCalculator from '../functions/chordCalculator';
 import getIntervals from '../functions/getIntervals';
 import Fretboard from '../components/Fretboard/Fretboard';
-import RootForm from '../components/RootForm';
+import RootNoteInput from '../components/RootNoteInput';
 import ErrorMessage from '../components/ErrorMessage';
 import CalculateButton from '../components/CalculateButton';
 import ChordDisplay from '../components/ChordDisplay';
@@ -24,8 +24,8 @@ function FretboardContainer() {
         setNotes(array);
     }
 
-    function getRoot({ target }) {
-        setRoot(target.value);
+    function getRoot(root) {
+        setRoot(root);
     }
 
     function removeErrorMessage() {
@@ -51,7 +51,7 @@ function FretboardContainer() {
             <ChordDisplay chord={chord}/>
             <Fretboard sendNotes={sendNotes}/>
             {errorMessage !== '' ? <ErrorMessage errorMessage={errorMessage} removeErrorMessage={removeErrorMessage}/> : ''}
-            <RootForm getRoot={getRoot} keys={notes}/>
+            <RootNoteInput notes={notes} getRoot={getRoot}/>
             <CalculateButton updateChord={updateChord}/>
         </motion.div>
     );
