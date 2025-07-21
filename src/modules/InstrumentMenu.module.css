@@ -1,3 +1,16 @@
 .button_container {
     justify-self: center;
 }
+
+.button_container button {
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    width: 125px;
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+.button_container button:hover {
+    background-color: #d6d6d6;
+}
