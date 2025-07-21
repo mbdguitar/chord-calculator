@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { noteSorter } from '../../functions/noteSorter';
 import String from './String';
 import styles from '../../modules/Fretboard.module.css';
 
@@ -7,7 +8,8 @@ function Fretboard({ sendNotes }) {
     const [ activeFrets, setActiveFrets ] = useState([]);
 
     useEffect(() => {
-        sendNotes(activeFrets)
+        const notesToSend = noteSorter([ ...activeFrets]);
+        sendNotes(notesToSend);
     }, [activeFrets, sendNotes]);
 
     const updateActiveFrets = useCallback((fret) => {

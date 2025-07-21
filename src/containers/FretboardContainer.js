@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion } from 'motion/react';
-import { noteSorter } from '../functions/noteSorter';
 import chordCalculator from '../functions/chordCalculator';
 import getIntervals from '../functions/getIntervals';
 import Fretboard from '../components/Fretboard/Fretboard';
@@ -16,13 +15,9 @@ function FretboardContainer() {
     const [ chord, setChord ] = useState('');
     const [ errorMessage, setErrorMessage ] = useState('')
 
-    useEffect(() => {
-        setNotes(noteSorter(notes));
-    }, [notes])
-
-    function sendNotes(array) {
+    const sendNotes = useCallback((array) => {
         setNotes(array);
-    }
+    }, [])
 
     function getRoot(root) {
         setRoot(root);

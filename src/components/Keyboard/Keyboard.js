@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { noteSorter } from "../../functions/noteSorter.js";
 import useWindowWidth from "../../hooks/useWindowWidth.js";
 import Octave from "./Octave.js"
 import keysGenerator from '../../functions/keysGenerator.js';
@@ -10,7 +11,8 @@ function Keyboard({ sendNotes }) {
     const { width } = useWindowWidth();
 
     useEffect(() => {
-        sendNotes(activeKeys)
+        const notesToSend = noteSorter([ ...activeKeys])
+        sendNotes(notesToSend)
     }, [activeKeys, sendNotes])
 
     useEffect(() => {
