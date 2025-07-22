@@ -1,3 +1,4 @@
+"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function getNumberOfOctaves() {
     var numberOfOctaves;
@@ -17,20 +18,7 @@ function keysGenerator() {
     //Setup
     var octavesArray = [];
     var id = 1;
-    var keysNames = [
-        'C',
-        'C# / Db',
-        'D',
-        'D# / Eb',
-        'E',
-        'F',
-        'F# / Gb',
-        'G',
-        'G# / Ab',
-        'A',
-        'A# / Bb',
-        'B'
-    ];
+    var keysNames = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
     var blackKeys = [1, 3, 6, 8, 10];
     var numberOfOctaves = getNumberOfOctaves();
     //Creates key objects and fills the keys object array with key objects and their respective data
