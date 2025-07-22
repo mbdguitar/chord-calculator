@@ -24,8 +24,8 @@ function getNumberOfFrets() {
 function fretsGenerator(tuning: string, stringNumber: number) {
     let fretboardLength: number = getNumberOfFrets();
     let fretArray: Fret[] = [];
-    let id: number = ((fretboardLength * stringNumber) + (stringNumber * 1)) - fretboardLength;
-    const fretNotes: string[] = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    let id: number = ((6 - stringNumber) * fretboardLength) + 1;
+    const fretNotes: string[] = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
     const firstNoteIndex = fretNotes.indexOf(tuning);
 
     for (let i = 0; i < fretboardLength; i++) {
