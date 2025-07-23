@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import RootNoteButton from "./RootNoteButton";
+import removeDuplicateRoots from "../functions/removeDuplicateRoots";
 import styles from '../modules/RootNoteInput.module.css'
 
 function RootNoteInput({ notes, getRoot }) {
     const [ activeRoot, setActiveRoot ] = useState('');
+    const uniqueNotes = removeDuplicateRoots([ ...notes ]);
 
     //Resets the active root if that note is no longer on the array of active notes
     useEffect(() => {
@@ -30,7 +32,7 @@ function RootNoteInput({ notes, getRoot }) {
     <div className={styles.root_note_input}>
         {activeRoot ? <p>Root: <strong>{activeRoot}</strong></p> : <p>Please select a root</p>}
         <div className={styles.root_note_input_buttons_container}>
-            {notes.map((note) => {
+            {uniqueNotes.map((note) => {
                 return <RootNoteButton note={note.name} handleActiveNote={handleActiveNote}/>
             })}
         </div>

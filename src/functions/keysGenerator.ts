@@ -5,7 +5,6 @@ interface Key {
     pitchInt: number;
     name: string;
     keyColor: string;
-    toggleOff: () => void;
 }
 
 function getNumberOfOctaves() {
@@ -44,10 +43,7 @@ function keysGenerator() {
                 isActive: false,
                 pitchInt: pitchInt,
                 name: keysNames[i % 12],
-                keyColor: color,
-                toggleOff() {
-                    this.isActive = false;
-                }
+                keyColor: color
             }
             octaveKeys.push(key);
             id += 1;

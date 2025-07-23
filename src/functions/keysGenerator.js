@@ -31,10 +31,7 @@ function keysGenerator() {
                 isActive: false,
                 pitchInt: pitchInt,
                 name: keysNames[i % 12],
-                keyColor: color,
-                toggleOff: function () {
-                    this.isActive = false;
-                }
+                keyColor: color
             };
             octaveKeys.push(key);
             id += 1;
