@@ -19,3 +19,31 @@
     font-size: 16px;
     margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .chord_container {
+
+    }
+
+    .chord_container h1 {
+
+    }
+
+    .chord_container p {
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chord_container {
+        margin: 0 0 15px 0;
+    }
+
+    .chord_container h1 {
+        font-size: 36px;
+    }
+
+    .chord_container p {
+        font-size: 14px;
+    }
+}

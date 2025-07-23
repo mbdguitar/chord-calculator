@@ -5,12 +5,30 @@
 .button_container button {
     cursor: pointer;
     border: none;
-    height: 50px;
-    width: 125px;
+    height: 2em;
+    width: 5em;
     font-size: 24px;
     margin: 0 5px;
 }
 
 .button_container button:hover {
     background-color: #d6d6d6;
+}
+
+@media screen and (max-width: 768px) {
+    .button_container button {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .button_container button {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button_container button {
+        font-size: 16px;
+    }
 }

@@ -1,0 +1,35 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="200" fill="#2E2F33"/>
+<rect x="0.0833321" width="49.8775" height="200" fill="#7A7A7A"/>
+<rect x="40" width="10" height="200" fill="#D9D9D9"/>
+<line x1="99.8358" y1="200" x2="99.8358" stroke="#474747" stroke-width="2"/>
+<line x1="149.713" y1="200" x2="149.713" stroke="#474747" stroke-width="2"/>
+<line x1="199.591" y1="200" x2="199.591" stroke="#474747" stroke-width="2"/>
+<line x1="249.468" y1="200" x2="249.468" stroke="#474747" stroke-width="2"/>
+<circle cx="175" cy="100" r="11" fill="#EEEEEE"/>
+<circle cx="275" cy="100" r="11" fill="#EEEEEE"/>
+<line y1="16.5" x2="300" y2="16.5" stroke="#EEEEEE"/>
+<line y1="15.5" x2="300" y2="15.5" stroke="white"/>
+<line y1="17.5" x2="300" y2="17.5" stroke="#E2E2E2"/>
+<line y1="18.5" x2="300" y2="18.5" stroke="#1F1F1F"/>
+<line y1="49.5" x2="300" y2="49.5" stroke="#EEEEEE"/>
+<line y1="48.5" x2="300" y2="48.5" stroke="white"/>
+<line y1="50.5" x2="300" y2="50.5" stroke="#E2E2E2"/>
+<line y1="51.5" x2="300" y2="51.5" stroke="#1F1F1F"/>
+<line y1="82.5" x2="300" y2="82.5" stroke="#EEEEEE"/>
+<line y1="81.5" x2="300" y2="81.5" stroke="white"/>
+<line y1="83.5" x2="300" y2="83.5" stroke="#E2E2E2"/>
+<line y1="84.5" x2="300" y2="84.5" stroke="#1F1F1F"/>
+<line y1="116.5" x2="300" y2="116.5" stroke="#EEEEEE"/>
+<line y1="115.5" x2="300" y2="115.5" stroke="white"/>
+<line y1="117.5" x2="300" y2="117.5" stroke="#E2E2E2"/>
+<line y1="118.5" x2="300" y2="118.5" stroke="#1F1F1F"/>
+<line y1="149.5" x2="300" y2="149.5" stroke="#EEEEEE"/>
+<line y1="148.5" x2="300" y2="148.5" stroke="white"/>
+<line y1="150.5" x2="300" y2="150.5" stroke="#E2E2E2"/>
+<line y1="151.5" x2="300" y2="151.5" stroke="#1F1F1F"/>
+<line y1="182.5" x2="300" y2="182.5" stroke="#EEEEEE"/>
+<line y1="181.5" x2="300" y2="181.5" stroke="white"/>
+<line y1="183.5" x2="300" y2="183.5" stroke="#E2E2E2"/>
+<line y1="184.5" x2="300" y2="184.5" stroke="#1F1F1F"/>
+</svg>

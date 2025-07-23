@@ -5,3 +5,9 @@
     align-items: center;
     margin: 50px 0;
 }
+
+@media screen and (max-width: 480px) {
+    .fretboard_container {
+        margin: 20px 0;
+    }
+}

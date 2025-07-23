@@ -6,11 +6,21 @@
 
 .calculate_button button{
     cursor: pointer;
-    width: 190px;
-    height: 60px;
+    width: 8em;
+    height: 3em;
     border: none;
     border-radius: 0;
     background-color: #A6E89D;
     color: #fff;
     font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+    .calculate_button {
+        margin: 15px 0 0 0;
+    }
+
+    .calculate_button button{
+        font-size: 20px;
+    }
 }

@@ -8,8 +8,11 @@ function getNumberOfFrets() {
     else if (screenSize < 880 && screenSize > 660) {
         numberOfFrets = 12;
     }
-    else {
+    else if (screenSize < 660 && screenSize > 440) {
         numberOfFrets = 8;
+    }
+    else {
+        numberOfFrets = 6;
     }
     return numberOfFrets;
 }
