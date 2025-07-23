@@ -1,5 +1,6 @@
 .button_container {
-    justify-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 .button_container button {
