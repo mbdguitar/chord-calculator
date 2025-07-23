@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import chordCalculator from '../functions/chordCalculator';
 import getIntervals from '../functions/getIntervals';
@@ -13,7 +13,11 @@ function KeyboardContainer() {
     const [ notes, setNotes ] = useState([]) ;
     const [ root, setRoot ] = useState('');
     const [ chord, setChord ] = useState('');
-    const [ errorMessage, setErrorMessage ] = useState('')
+    const [ errorMessage, setErrorMessage ] = useState('');
+
+    useEffect(() => {
+        removeErrorMessage();
+    }, [notes, root, chord]);
 
     const sendNotes = useCallback((array) => {
         setNotes(array);

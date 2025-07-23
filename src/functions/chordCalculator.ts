@@ -23,7 +23,7 @@ function numberToInterval(array: number[]) {
         }   
         return intervals;
     } else {
-        throw new Error('Please select at least 3 notes')
+        throw new Error('Please select at least 3 different notes')
     }
 }
 
@@ -39,7 +39,7 @@ function chordCalculator(intervalsArray: number[], root: string) {
             };
         return chord;
         } else {
-            throw new Error('Please select a root from the dropdown');
+            throw new Error('Please select a root from the options below');
         }
     } catch(error) {
         return error.message
