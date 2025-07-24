@@ -42,7 +42,7 @@
   cursor: pointer;
   background-color: #000000;
   color: white;
-  width: 16px;
+  width: 25px;
   height: 100px;
   z-index: 2;
   font-family: sans-serif;
@@ -79,13 +79,25 @@
 }
 
 .fs {
-  grid-column: 7/8;
+  grid-column: 8/9;
 }
 
 .gs {
-  grid-column: 9/10;
+  grid-column: 10/11;
 }
 
 .as {
-  grid-column: 11/12;
+  grid-column: 12/13;
+}
+
+@media screen and (max-width: 660px) {
+  .black {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .black {
+    width: 25px;
+  }
 }

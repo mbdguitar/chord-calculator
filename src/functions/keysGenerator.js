@@ -2,14 +2,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function getNumberOfOctaves() {
     var numberOfOctaves;
     var screenSize = window.innerWidth;
-    if (screenSize >= 880) {
-        numberOfOctaves = 4;
-    }
-    else if (screenSize < 880 && screenSize > 660) {
+    if (screenSize >= 990) {
         numberOfOctaves = 3;
     }
-    else {
+    else if (screenSize < 990 && screenSize > 550) {
         numberOfOctaves = 2;
+    }
+    else {
+        numberOfOctaves = 1;
     }
     return numberOfOctaves;
 }
