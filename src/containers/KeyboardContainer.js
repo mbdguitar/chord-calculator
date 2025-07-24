@@ -19,6 +19,12 @@ function KeyboardContainer() {
         removeErrorMessage();
     }, [notes, root, chord]);
 
+    useEffect(() => {
+        if (!notes.some((note) => note.name === root)) {
+            setRoot('');
+        }
+    }, [notes, root]);
+
     const sendNotes = useCallback((array) => {
         setNotes(array);
     }, [])
