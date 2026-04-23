@@ -1,13 +1,23 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { motion } from 'motion/react';
 import styles from '../modules/About.module.css';
 
 function About() {
+    const [message, setMessage] = useState('');
+
+    useEffect(() => {
+        if (message) {
+            setTimeout(() => {
+                setMessage('')
+            }, 2000)
+        }
+    }, [message]);
+
     async function handleSubmit(e) {
         e.preventDefault();
 
         try {
-            const formData = new FormData(e);
+            const formData = new FormData(e.target);
 
             const response = await fetch('/', {
                 method: 'POST',
@@ -15,12 +25,12 @@ function About() {
                 body: new URLSearchParams(formData).toString()
             });
 
-            if (!response.ok) throw new Error("homePage.contactSection.sentError");
+            if (!response.ok) throw new Error("Could not send message, please try again later");
 
-            (e).reset();
-            setMessage(t('homePage.contactSection.sentConfirmation'));
+            (e.target).reset();
+            setMessage("Message sent succesfully!");
         } catch (err) {
-            setMessage(t(err.message));
+            setMessage(err.message);
         };
     };
 
@@ -61,15 +71,15 @@ function About() {
                     <form name='contact' data-netlify="true" onSubmit={(e) => handleSubmit(e)}>
                         <div className={styles.name}>
                             <label htmlFor='name'>NAME</label>
-                            <input id='name' type='text' name='name' placeholder="Enter your name" autocomplete></input>
+                            <input id='name' type='text' name='name' placeholder="Enter your name" autocomplete required className={styles.name_text}></input>
                         </div>
                         <div className={styles.email}>
                             <label htmlFor='email'>EMAIL</label>
-                            <input id='email' type='email' name='email' placeholder="Enter your email"></input>
+                            <input id='email' type='email' name='email' placeholder="Enter your email" autocomplete required className={styles.email_text}></input>
                         </div>
                         <div className={styles.category}>
                             <label htmlFor='category'>CATEGORY</label>
-                            <select id='category'>
+                            <select id='category' className={styles.category_text} required>
                                 <option default></option>
                                 <option value='bug-report'>Bug Report</option>
                                 <option value='feature-request'>Feature Request</option>
@@ -79,10 +89,11 @@ function About() {
                         </div>
                         <div className={styles.message}>
                             <label htmlFor='message'>MESSAGE</label>
-                            <textarea id='message' name='message' placeholder="Enter your message"></textarea>
+                            <textarea id='message' name='message' placeholder="Enter your message" className={styles.message_text} required></textarea>
                         </div>
                         <input type='submit' value='Submit' className={styles.about_submit_button} />
                     </form>
+                    {message ? <p className={styles.confirmation_message}>{message}</p> : <></>}
                 </div>
             </section>
         </motion.div>

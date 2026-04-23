@@ -112,6 +112,18 @@ section {
     background-color: #2e2e2e;
 }
 
+.name_text,
+.email_text,
+.category_text,
+.message_text {
+    font-family: 'Lexend', Helvetica, sans-serif;
+}
+
+.confirmation_message {
+    font-family: 'Lexend', Helvetica, sans-serif;
+    padding-top: 20px;
+}
+
 @media screen and (max-width: 768px) {
     .about {
         display: grid;
