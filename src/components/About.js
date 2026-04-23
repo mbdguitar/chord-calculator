@@ -9,7 +9,7 @@ function About() {
         if (message) {
             setTimeout(() => {
                 setMessage('')
-            }, 2000)
+            }, 5000)
         }
     }, [message]);
 
@@ -69,14 +69,19 @@ function About() {
                 <p>Found some bugs or have any questions about the program? Let's get in touch!</p>
                 <div className={styles.contact_form_container}>
                     <form name='contact' data-netlify="true" onSubmit={(e) => handleSubmit(e)}>
+                        {/* CONNECTS CONTACT COMPONENT TO HTML FOR NETLIFY HANDLING */}
+                        <input type="hidden" name="form-name" value="contact" />
+
                         <div className={styles.name}>
                             <label htmlFor='name'>NAME</label>
                             <input id='name' type='text' name='name' placeholder="Enter your name" autocomplete required className={styles.name_text}></input>
                         </div>
+
                         <div className={styles.email}>
                             <label htmlFor='email'>EMAIL</label>
                             <input id='email' type='email' name='email' placeholder="Enter your email" autocomplete required className={styles.email_text}></input>
                         </div>
+
                         <div className={styles.category}>
                             <label htmlFor='category'>CATEGORY</label>
                             <select id='category' className={styles.category_text} required>
@@ -87,10 +92,12 @@ function About() {
                                 <option value='other'>Other</option>
                             </select>
                         </div>
+
                         <div className={styles.message}>
                             <label htmlFor='message'>MESSAGE</label>
                             <textarea id='message' name='message' placeholder="Enter your message" className={styles.message_text} required></textarea>
                         </div>
+                        
                         <input type='submit' value='Submit' className={styles.about_submit_button} />
                     </form>
                     {message ? <p className={styles.confirmation_message}>{message}</p> : <></>}
