@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var intervals = ['R', 'm2', 'M2', 'm3', 'M3', 'P4', 'Tri', 'P5', 'm6', 'M6', 'm7', 'M7'];
 function nameIntervals(set) {
@@ -10,7 +9,7 @@ function nameIntervals(set) {
 function analyzeBase(set) {
     if (set.has(4) && set.has(7))
         return '';
-    if ((set.has(3) && set.has(7)) || (set.has(3) && set.has(6)) && set.has(10))
+    if ((set.has(3) && set.has(7)) || (set.has(3) && set.has(6) && set.has(10)))
         return 'm'; //Extra check for m7b5 chords which are unique
     if (set.has(3) && set.has(6) && !set.has(10))
         return 'dim'; //Extra check for m7b5 chords which are unique
@@ -20,8 +19,6 @@ function analyzeBase(set) {
         return 'sus4';
     if (set.has(2) && set.has(7) && !set.has(9))
         return 'sus2';
-    //analyze dyad here
-    //no base
     return '';
 }
 ;
@@ -34,8 +31,6 @@ function getModifier(set) {
         return '';
     if (set.has(11))
         return 'maj';
-    //no base
-    return null;
 }
 ;
 function rankExtension(base, set) {
@@ -45,7 +40,7 @@ function rankExtension(base, set) {
         extensions.push(7);
     //Adds 9th only if base does not have any 3rd AND has a 4th
     if (base === 'sus2' || base === 'sus4') {
-        if ((set.has(10) || set.has(11)) && set.has(2) && (!set.has(4) && set.has(5) || !set.has(3) && set.has(5)))
+        if ((set.has(10) || set.has(11)) && set.has(2) && ((!set.has(4) && set.has(5)) || (!set.has(3) && set.has(5))))
             extensions.push(9);
     }
     else {
