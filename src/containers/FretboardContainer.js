@@ -10,10 +10,10 @@ import ChordDisplay from '../components/ChordDisplay';
 import styles from '../modules/FretboardContainer.module.css';
 
 function FretboardContainer() {
-    const [ notes, setNotes ] = useState([]) ;
-    const [ root, setRoot ] = useState('');
-    const [ chord, setChord ] = useState('');
-    const [ errorMessage, setErrorMessage ] = useState('')
+    const [notes, setNotes] = useState([]);
+    const [root, setRoot] = useState('');
+    const [chord, setChord] = useState('');
+    const [errorMessage, setErrorMessage] = useState('')
 
     useEffect(() => {
         removeErrorMessage();
@@ -38,28 +38,24 @@ function FretboardContainer() {
     }
 
     function updateChord() {
-        let result = chordCalculator(getIntervals(notes, root), root);
-        if (typeof result === 'string') {
-            setErrorMessage(result)
-        } else {
-            setChord(result);
-        }
+        let result = chordCalculator(root, getIntervals(notes, root));
+        setChord(result);
     }
 
     return (
-        <motion.div 
+        <motion.div
             className={styles.fretboard_container}
-            initial={{ opacity: 0}}
-            animate={{ opacity: 1}}
-            transition={{transition: 0.1}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ transition: 0.1 }}
         >
-            <ChordDisplay chord={chord}/>
-            <Fretboard sendNotes={sendNotes}/>
-            {errorMessage !== '' ? <ErrorMessage errorMessage={errorMessage} removeErrorMessage={removeErrorMessage}/> : ''}
-            <RootNoteInput notes={notes} getRoot={getRoot}/>
-            <CalculateButton updateChord={updateChord}/>
+            <ChordDisplay chord={chord} />
+            <Fretboard sendNotes={sendNotes} />
+            {errorMessage !== '' ? <ErrorMessage errorMessage={errorMessage} removeErrorMessage={removeErrorMessage} /> : ''}
+            <RootNoteInput notes={notes} getRoot={getRoot} />
+            <CalculateButton updateChord={updateChord} />
         </motion.div>
     );
-} 
- 
+}
+
 export default FretboardContainer;
