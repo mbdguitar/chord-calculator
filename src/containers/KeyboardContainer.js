@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
-import buildChordSymbol from '../functions/chordCalculator';
+import nameChord from '../functions/chordCalculator';
 import getIntervals from '../functions/getIntervals';
 import Keyboard from '../components/Keyboard/Keyboard';
 import RootNoteInput from '../components/RootNoteInput';
@@ -39,12 +39,8 @@ function KeyboardContainer() {
     }
 
     function updateChord() {
-        let result = buildChordSymbol(getIntervals(notes, root), root);
-        if (typeof result === 'string') {
-            setErrorMessage(result)
-        } else {
-            setChord(result);
-        }
+        let result = nameChord(root, getIntervals(notes, root));
+        setChord(result);
     }
 
     return (
