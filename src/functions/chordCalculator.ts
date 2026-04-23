@@ -8,7 +8,7 @@ function nameIntervals(set: Set<number>) {
 
 function analyzeBase(set: Set<number>) {
     if (set.has(4) && set.has(7)) return '';
-    if ((set.has(3) && set.has(7)) || (set.has(3) && set.has(6)) && set.has(10)) return 'm';        //Extra check for m7b5 chords which are unique
+    if ((set.has(3) && set.has(7)) || (set.has(3) && set.has(6) && set.has(10))) return 'm';        //Extra check for m7b5 chords which are unique
     if (set.has(3) && set.has(6) && !set.has(10)) return 'dim';                                     //Extra check for m7b5 chords which are unique
     if (set.has(4) && set.has(8)) return '+';
     if (set.has(5) && set.has(7)) return 'sus4';
@@ -30,7 +30,7 @@ function rankExtension(base: string, set: Set<number>) {
     if (set.has(10) || set.has(11)) extensions.push(7);
     //Adds 9th only if base does not have any 3rd AND has a 4th
     if (base === 'sus2' || base === 'sus4') {
-        if ((set.has(10) || set.has(11)) && set.has(2) && (!set.has(4) && set.has(5) || !set.has(3) && set.has(5))) extensions.push(9);
+        if ((set.has(10) || set.has(11)) && set.has(2) && ((!set.has(4) && set.has(5)) || (!set.has(3) && set.has(5)))) extensions.push(9);
     } else {
         if ((set.has(10) || set.has(11)) && set.has(2)) extensions.push(9);
     }
