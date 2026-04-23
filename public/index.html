@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Chord Calculator</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Chord Calculator</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- NETLIFY CONTACT FORM -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input id='name' type='text' name='name' placeholder="Enter your name" autocomplete></input>
+    <input id='email' type='email' name='email' placeholder="Enter your email"></input>
+    <select id='category'>
+      <option default></option>
+      <option value='bug-report'></option>
+      <option value='feature-request'></option>
+      <option value='general-feedback'></option>
+      <option value='other'></option>
+    </select>
+    <textarea id='message' name='message' placeholder="Enter your message"></textarea>
+  </form>
+</body>
+
 </html>
