@@ -12,12 +12,12 @@ function getNumberOfOctaves() {
     let numberOfOctaves: number;
     const screenSize: number = window.innerWidth;
 
-    if (screenSize >= 880) {
-        numberOfOctaves = 4;
-    } else if (screenSize < 880 && screenSize > 660) {
+    if (screenSize >= 990) {
         numberOfOctaves = 3;
-    } else {
+    } else if (screenSize < 990 && screenSize > 550) {
         numberOfOctaves = 2;
+    } else {
+        numberOfOctaves = 1;
     }
 
     return numberOfOctaves
@@ -31,7 +31,7 @@ function keysGenerator() {
     const keysNames: string[] = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
     let blackKeys = [1, 3, 6, 8, 10];
     let numberOfOctaves = getNumberOfOctaves();
-    
+
     //Creates key objects and fills the keys object array with key objects and their respective data
     for (let j = 0; j < numberOfOctaves; j++) {
         let octaveKeys: Key[] = []

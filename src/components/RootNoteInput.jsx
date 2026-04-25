@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import RootNoteButton from "./RootNoteButton";
 import removeDuplicateRoots from "../functions/removeDuplicateRoots";
 import styles from '../modules/RootNoteInput.module.css'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import KeyboardContainer from '../containers/KeyboardContainer';
 import FretboardContainer from '../containers/FretboardContainer';
 import InstrumentMenu from './InstrumentMenu';

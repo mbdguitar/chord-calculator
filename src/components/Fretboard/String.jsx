@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import Fret from './Fret';
 import fretsGenerator from '../../functions/fretsGenerator';

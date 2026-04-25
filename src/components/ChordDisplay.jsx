@@ -1,4 +1,3 @@
-import React from "react";
 import styles from '../modules/ChordDisplay.module.css'
 
 function ChordDisplay({ chord }) {

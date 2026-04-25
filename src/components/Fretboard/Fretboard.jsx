@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { noteSorter } from '../../functions/noteSorter';
 import String from './String';
 import styles from '../../modules/Fretboard.module.css';

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from '../modules/RootForm.module.css'
 
 function RootForm({ getRoot, keys }) {
