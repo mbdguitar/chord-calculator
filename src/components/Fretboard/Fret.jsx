@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../../modules/Fret.module.css'
 
 function Fret({ fretObj, handleActiveFret }) {

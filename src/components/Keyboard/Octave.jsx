@@ -1,4 +1,3 @@
-import React from "react";
 import KeyContainer from '../../containers/KeyContainer';
 import styles from '../../modules/Octave.module.css'
 

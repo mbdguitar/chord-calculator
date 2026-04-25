@@ -1,4 +1,3 @@
-import React from "react";
 import styles from '../modules/RootNoteButton.module.css'
 
 function RootNoteButton({ note, handleActiveNote }) {

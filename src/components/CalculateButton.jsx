@@ -1,4 +1,3 @@
-import React from "react";
 import styles from '../modules/CalculateButton.module.css';
 
 function CalculateButton({ updateChord }) {

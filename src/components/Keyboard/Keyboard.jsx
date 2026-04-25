@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { noteSorter } from "../../functions/noteSorter.js";
-import useWindowWidth from "../../hooks/useWindowWidth.js";
-import Octave from "./Octave.js"
-import keysGenerator from '../../functions/keysGenerator.js';
+import { useState, useEffect, useCallback } from "react";
+import { noteSorter } from "../../functions/noteSorter";
+import useWindowWidth from "../../hooks/useWindowWidth";
+import Octave from "./Octave"
+import keysGenerator from '../../functions/keysGenerator';
 import styles from '../../modules/Keyboard.module.css'
 
 function Keyboard({ sendNotes }) {
-    const [ keysToRender, setKeysToRender ] = useState(keysGenerator())
-    const [ activeKeys, setActiveKeys ] = useState([])
+    const [keysToRender, setKeysToRender] = useState(keysGenerator())
+    const [activeKeys, setActiveKeys] = useState([])
     const { width } = useWindowWidth();
 
     useEffect(() => {
-        const notesToSend = noteSorter([ ...activeKeys])
+        const notesToSend = noteSorter([...activeKeys])
         sendNotes(notesToSend)
     }, [activeKeys, sendNotes])
 
@@ -36,7 +36,7 @@ function Keyboard({ sendNotes }) {
             <div className={styles.keyboard}>
                 {keysToRender.map((octave) => {
                     let octaveKeys = octave;
-                    return <Octave octaveKeys={octaveKeys} updateActiveKeys={updateActiveKeys}/>
+                    return <Octave octaveKeys={octaveKeys} updateActiveKeys={updateActiveKeys} />
                 })}
             </div>
         </>
