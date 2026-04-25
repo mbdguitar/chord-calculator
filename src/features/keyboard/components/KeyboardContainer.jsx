@@ -1,19 +1,19 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
-import getIntervals from '../functions/getIntervals';
-import Fretboard from '../components/Fretboard/Fretboard';
-import RootNoteInput from '../components/RootNoteInput';
-import ErrorMessage from '../components/ErrorMessage';
-import CalculateButton from '../components/CalculateButton';
-import ChordDisplay from '../components/ChordDisplay';
-import styles from '../modules/FretboardContainer.module.css';
-import postChord from '../api/postChord';
+import getIntervals from '../../../lib/getIntervals';
+import Keyboard from '../components/Keyboard/Keyboard';
+import RootNoteInput from '../../rootMenu/components/RootNoteInput';
+import ErrorMessage from '../../../ui/ErrorMessage';
+import CalculateButton from '../../../ui/CalculateButton';
+import ChordDisplay from '../../../ui/ChordDisplay';
+import styles from '../modules/KeyboardContainer.module.css';
+import postChord from '../../../api/postChord';
 
-function FretboardContainer() {
+function KeyboardContainer() {
     const [notes, setNotes] = useState([]);
     const [root, setRoot] = useState('');
-    const [chord, setChord] = useState('');
-    const [errorMessage, setErrorMessage] = useState('')
+    const [chord, setChord] = useState({});
+    const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
         removeErrorMessage();
@@ -28,6 +28,7 @@ function FretboardContainer() {
     const sendNotes = useCallback((array) => {
         setNotes(array);
     }, [])
+
 
     function getRoot(root) {
         setRoot(root);
@@ -48,13 +49,13 @@ function FretboardContainer() {
 
     return (
         <motion.div
-            className={styles.fretboard_container}
+            className={styles.keyboard_container}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ transition: 0.1 }}
         >
             <ChordDisplay chord={chord} />
-            <Fretboard sendNotes={sendNotes} />
+            <Keyboard sendNotes={sendNotes} />
             {errorMessage !== '' ? <ErrorMessage errorMessage={errorMessage} removeErrorMessage={removeErrorMessage} /> : ''}
             <RootNoteInput notes={notes} getRoot={getRoot} />
             <CalculateButton updateChord={updateChord} />
@@ -62,4 +63,4 @@ function FretboardContainer() {
     );
 }
 
-export default FretboardContainer;
+export default KeyboardContainer;

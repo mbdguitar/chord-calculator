@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import useWindowWidth from '../../hooks/useWindowWidth';
+import useWindowWidth from '../../../hooks/useWindowWidth';
 import Fret from './Fret';
-import fretsGenerator from '../../functions/fretsGenerator';
+import fretsGenerator from '../utils/fretsGenerator';
 import styles from '../../modules/String.module.css'
 
 function String({ tuning, stringNumber, updateActiveFrets }) {
-    const [ fretsToRender, setFretsToRender ] = useState(fretsGenerator(tuning, stringNumber));
-    const [ frets, setFrets ] = useState(fretsToRender); 
-    const [ lastActiveFret, setLastActiveFret ] = useState ({});
+    const [fretsToRender, setFretsToRender] = useState(fretsGenerator(tuning, stringNumber));
+    const [frets, setFrets] = useState(fretsToRender);
+    const [lastActiveFret, setLastActiveFret] = useState({});
     const { width } = useWindowWidth();
 
     useEffect(() => {
@@ -17,10 +17,10 @@ function String({ tuning, stringNumber, updateActiveFrets }) {
     useEffect(() => {
         let activeFret = frets.find((fret) => fret.isActive)
         if (activeFret) {
-            updateActiveFrets({ ...lastActiveFret, isActive: false})
+            updateActiveFrets({ ...lastActiveFret, isActive: false })
             updateActiveFrets(activeFret)
         } else {
-            updateActiveFrets({ ...lastActiveFret, isActive: false})
+            updateActiveFrets({ ...lastActiveFret, isActive: false })
         }
     }, [frets, lastActiveFret, updateActiveFrets]);
 
@@ -44,9 +44,9 @@ function String({ tuning, stringNumber, updateActiveFrets }) {
     return (
         <div className={styles.string}>
             {frets.map((fret) => {
-                return <Fret 
+                return <Fret
                     key={fret.id}
-                    fretObj={fret} 
+                    fretObj={fret}
                     handleActiveFret={handleActiveFret}
                 />
             })}

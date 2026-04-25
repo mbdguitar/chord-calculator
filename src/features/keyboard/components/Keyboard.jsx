@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
-import { noteSorter } from "../../functions/noteSorter";
-import useWindowWidth from "../../hooks/useWindowWidth";
+import { noteSorter } from "../../../lib/noteSorter";
+import useWindowWidth from "../../../hooks/useWindowWidth";
 import Octave from "./Octave"
-import keysGenerator from '../../functions/keysGenerator';
+import keysGenerator from '../utils/keysGenerator';
 import styles from '../../modules/Keyboard.module.css'
 
 function Keyboard({ sendNotes }) {

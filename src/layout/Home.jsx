@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import KeyboardContainer from '../containers/KeyboardContainer';
+import KeyboardContainer from '../features/keyboard/components/KeyboardContainer';
 import FretboardContainer from '../containers/FretboardContainer';
-import InstrumentMenu from './InstrumentMenu';
+import InstrumentMenu from '../ui/InstrumentMenu';
 
 function Home() {
-    const [ activeInstrument, setActiveInstrument ] = useState('Piano');
+    const [activeInstrument, setActiveInstrument] = useState('Piano');
 
     const instrumentComponents = {
         Piano: <KeyboardContainer />,
@@ -18,10 +18,10 @@ function Home() {
 
     return (
         <>
-            <InstrumentMenu handleInstrumentMenuButton={handleInstrumentMenuButton}/>
+            <InstrumentMenu handleInstrumentMenuButton={handleInstrumentMenuButton} />
             {instrumentComponents[activeInstrument] || <div>Select an instrument</div>}
         </>
-    );  
-} 
- 
+    );
+}
+
 export default Home
