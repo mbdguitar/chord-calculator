@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import useWindowWidth from '../../../hooks/useWindowWidth';
 import Fret from './Fret';
 import fretsGenerator from '../utils/fretsGenerator';
-import styles from '../../modules/String.module.css'
+import styles from '../../../modules/String.module.css'
 
 function String({ tuning, stringNumber, updateActiveFrets }) {
     const [fretsToRender, setFretsToRender] = useState(fretsGenerator(tuning, stringNumber));

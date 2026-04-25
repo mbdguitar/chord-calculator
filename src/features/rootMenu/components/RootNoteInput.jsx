@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import RootNoteButton from "./RootNoteButton";
 import removeDuplicateRoots from "../../../lib/removeDuplicateRoots";
-import styles from '../modules/RootNoteInput.module.css'
+import styles from '../../../modules/RootNoteInput.module.css'
 
 function RootNoteInput({ notes, getRoot }) {
     const [activeRoot, setActiveRoot] = useState('');

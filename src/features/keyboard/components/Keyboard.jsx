@@ -3,7 +3,7 @@ import { noteSorter } from "../../../lib/noteSorter";
 import useWindowWidth from "../../../hooks/useWindowWidth";
 import Octave from "./Octave"
 import keysGenerator from '../utils/keysGenerator';
-import styles from '../../modules/Keyboard.module.css'
+import styles from '../../../modules/Keyboard.module.css'
 
 function Keyboard({ sendNotes }) {
     const [keysToRender, setKeysToRender] = useState(keysGenerator())

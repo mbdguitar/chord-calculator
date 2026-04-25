@@ -1,4 +1,4 @@
-import styles from '../modules/RootNoteButton.module.css'
+import styles from '../../../modules/RootNoteButton.module.css'
 
 function RootNoteButton({ note, handleActiveNote }) {
     return (

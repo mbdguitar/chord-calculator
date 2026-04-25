@@ -1,13 +1,13 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
-import getIntervals from '../functions/getIntervals';
-import Fretboard from '../components/Fretboard/Fretboard';
-import RootNoteInput from '../components/RootNoteInput';
-import ErrorMessage from '../components/ui/ErrorMessage';
-import CalculateButton from '../components/ui/CalculateButton';
-import ChordDisplay from '../components/ui/ChordDisplay';
-import styles from '../modules/FretboardContainer.module.css';
-import postChord from '../api/postChord';
+import getIntervals from '../../../lib/getIntervals';
+import Fretboard from './Fretboard';
+import RootNoteInput from '../../rootMenu/components/RootNoteInput';
+import ErrorMessage from '../../../ui/ErrorMessage';
+import CalculateButton from '../../../ui/CalculateButton';
+import ChordDisplay from '../../../ui/ChordDisplay';
+import styles from '../../../modules/FretboardContainer.module.css';
+import postChord from '../../../api/postChord';
 
 function FretboardContainer() {
     const [notes, setNotes] = useState([]);

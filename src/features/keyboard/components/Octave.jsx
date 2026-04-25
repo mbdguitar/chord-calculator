@@ -1,5 +1,5 @@
 import KeyContainer from './KeyContainer';
-import styles from '../../modules/Octave.module.css'
+import styles from '../../../modules/Octave.module.css'
 
 function Octave({ octaveKeys, updateActiveKeys }) {
     return (

@@ -1,4 +1,4 @@
-import styles from '../../modules/Fret.module.css'
+import styles from '../../../modules/Fret.module.css'
 
 function Fret({ fretObj, handleActiveFret }) {
     // sets the name of the class for each of the frets

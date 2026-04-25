@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import { noteSorter } from '../../../functions/noteSorter';
+import { noteSorter } from '../../../lib/noteSorter';
 import String from './String';
-import styles from '../../modules/Fretboard.module.css';
+import styles from '../../../modules/Fretboard.module.css';
 
 function Fretboard({ sendNotes }) {
     const [strings] = useState([['E', 1], ['B', 2], ['G', 3], ['D', 4], ['A', 5], ['E', 6]]);

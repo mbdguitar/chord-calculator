@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import KeyboardContainer from '../features/keyboard/components/KeyboardContainer';
-import FretboardContainer from '../containers/FretboardContainer';
+import FretboardContainer from '../features/fretboard/components/FretboardContainer';
 import InstrumentMenu from '../ui/InstrumentMenu';
 
 function Home() {

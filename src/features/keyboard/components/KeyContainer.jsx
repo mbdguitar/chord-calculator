@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Key from '../components/Keyboard/Key'
-import styles from '../modules/KeyContainer.module.css';
+import Key from './Key'
+import styles from '../../../modules/KeyContainer.module.css';
 
 function KeyContainer({ keyObj, updateActiveKeys }) {
-    const [ activeKey, setActiveKey ] = useState(keyObj);
+    const [activeKey, setActiveKey] = useState(keyObj);
 
     useEffect(() => {
         updateActiveKeys(activeKey);
@@ -18,7 +18,7 @@ function KeyContainer({ keyObj, updateActiveKeys }) {
     }
 
     function getSharpName(name) {
-        switch(name[0]) {
+        switch (name[0]) {
             case 'C':
                 return styles.cs;
             case 'D':
@@ -53,12 +53,12 @@ function KeyContainer({ keyObj, updateActiveKeys }) {
         setActiveKey((prev) => {
             if (activeKey.isActive) {
                 return {
-                    ...prev, 
+                    ...prev,
                     isActive: false,
                 }
             } else {
                 return {
-                    ...prev, 
+                    ...prev,
                     isActive: true,
                 }
             }
@@ -67,9 +67,9 @@ function KeyContainer({ keyObj, updateActiveKeys }) {
 
     return (
         <>
-            <Key 
-                className={getClassName(activeKey.name, activeKey.keyColor)} 
-                handleToggle={handleToggle} 
+            <Key
+                className={getClassName(activeKey.name, activeKey.keyColor)}
+                handleToggle={handleToggle}
                 name={activeKey.name}
             />
         </>

@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import getIntervals from '../../../lib/getIntervals';
-import Keyboard from '../components/Keyboard/Keyboard';
+import Keyboard from './Keyboard';
 import RootNoteInput from '../../rootMenu/components/RootNoteInput';
 import ErrorMessage from '../../../ui/ErrorMessage';
 import CalculateButton from '../../../ui/CalculateButton';
 import ChordDisplay from '../../../ui/ChordDisplay';
-import styles from '../modules/KeyboardContainer.module.css';
+import styles from '../../../modules/KeyboardContainer.module.css';
 import postChord from '../../../api/postChord';
 
 function KeyboardContainer() {
