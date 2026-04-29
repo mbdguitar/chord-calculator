@@ -53,8 +53,9 @@ function About() {
             <section>
                 <h2>How to use</h2>
                 <p>
-                    This app analyzes selected notes on the Keyboard and uses an algorithm to determine the name of the chord. Due to the complex nature of
-                    harmony. Just click on the piano to select the notes and hit calculate!
+                    Just click on the piano to select the notes and hit calculate! This app analyzes selected notes on the Keyboard and uses an
+                    algorithm to calculate the name of the chord. Due to the complex nature of harmony some chords might not be named correctly
+                    or in the most efficient way.
                 </p>
             </section>
             <section>
@@ -97,7 +98,7 @@ function About() {
                             <label htmlFor='message'>MESSAGE</label>
                             <textarea id='message' name='message' placeholder="Enter your message" className={styles.message_text} required></textarea>
                         </div>
-                        
+
                         <input type='submit' value='Submit' className={styles.about_submit_button} />
                     </form>
                     {message ? <p className={styles.confirmation_message}>{message}</p> : <></>}
